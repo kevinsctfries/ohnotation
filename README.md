@@ -1,51 +1,51 @@
-# React + TypeScript + Vite
+# Oh, Notation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Oh, Notation**! This website is designed to provide an interactive and educational experience to help you understand and master **Big O Notation**, a critical concept in computer science for analyzing the efficiency of algorithms.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [About](#about)
+- [Features](#features)
+- [Learning Topics](#learning-topics)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Technologies Used](#technologies-used)
 
-## Expanding the ESLint configuration
+## About
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Big O Notation** is a way of describing the efficiency of an algorithm in terms of its time complexity and space complexity. This website provides a variety of resources to learn about Big O Notation, including interactive examples, visualizations, and real-world use cases.
 
-- Configure the top-level `parserOptions` property like this:
+Whether you're a student learning algorithms or a developer looking to refine your knowledge of performance optimization, this website has something for you!
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Features
+
+- **Interactive Examples**: Explore different time complexities (e.g., O(1), O(n), O(log n), O(n²)) through interactive code examples in various programming languages like JavaScript, Python, C++, and Java.
+- **Visualizations**: Interactive charts and graphs that visualize how different algorithms perform as the size of the input grows.
+- **Real-World Use Cases**: Learn how Big O Notation is applied in real-world programming problems and how to choose the most efficient algorithm for specific tasks.
+- **Algorithm Comparison**: Compare the performance of different algorithms side by side to understand their efficiency.
+
+## Learning Topics
+
+Here are the key topics you will explore on the website:
+
+- **Introduction to Big O Notation**: Learn the fundamentals of time and space complexity analysis.
+- **Common Big O Complexities**:
+  - **O(1)** - Constant time complexity
+  - **O(n)** - Linear time complexity
+  - **O(log n)** - Logarithmic time complexity
+  - **O(n²)** - Quadratic time complexity
+  - And more!
+- **Space Complexity**: How to analyze the memory usage of algorithms.
+- **Optimizing Algorithms**: Learn techniques for improving the efficiency of your code.
+- **Algorithm Design**: Best practices in selecting and implementing algorithms for problem-solving.
+- **Real-World Examples**: Practical applications of Big O Notation in everyday coding scenarios.
+
+## Getting Started
+
+### 1. Clone the Repository
+
+To run the website locally, start by cloning the repository:
+
+```bash
+git clone https://github.com/yourusername/big-o-notation-website.git
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# ohnotation
