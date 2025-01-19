@@ -1,9 +1,15 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 import BigONotationChart from "../../BigONotationChart";
 
 const Home = () => {
   return (
     <div className="home">
+      <div className="navBtns">
+        <Link to="/constant" className="navButton">
+          Next Page
+        </Link>
+      </div>
       <h2>What is Big O Notation?</h2>
       <div className="infoText">
         <p>
@@ -33,13 +39,19 @@ const Home = () => {
         <h3>Key Concepts:</h3>
         <ul>
           <li>
-            Input Size (n): Refers to the amount of data or the size of the
-            input. For example, if you're sorting an array, the input size would
-            be the number of elements in the array.
+            <span>Input Size (n):</span>
+            <p>
+              Refers to the amount of data or the size of the input. For
+              example, if you're sorting an array, the input size would be the
+              number of elements in the array.
+            </p>
           </li>
           <li>
-            Growth Rate: Describes how the time or space requirements increase
-            as the input size grows.
+            <span>Growth Rate:</span>
+            <p>
+              Describes how the time or space requirements increase as the input
+              size grows.
+            </p>
           </li>
         </ul>
       </div>

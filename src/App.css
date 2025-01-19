@@ -9,11 +9,22 @@
   padding: 20px;
   flex-grow: 1;
   background-color: #ecf0f1;
-  color: #2c3e50;
+  color: black;
 }
 
 h1 {
   font-size: 3rem;
+}
+
+h2 {
+  margin: 1rem;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+h3 {
+  text-align: right;
+  margin: 1rem;
+  border-bottom: 1px solid #4a4a4a;
 }
 
 .title {
@@ -23,9 +34,23 @@ h1 {
   color: #2c3e50;
 }
 
-h2 {
-  margin: 1rem;
-  border-bottom: 1px solid #4a4a4a;
+.navBtns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBtns .navButton {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  font-weight: normal;
+  width: 120px;
 }
 
 .infoText {
@@ -33,7 +58,46 @@ h2 {
   font-size: 1rem;
   padding: 20px;
   max-width: 100vw;
-  background-color: #f8f9fa;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.langBtn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.langBtn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  font-weight: normal;
+  width: 120px;
+}
+
+.langBtn button:hover {
+  background-color: #f7f7f7;
+  border-color: #bbb;
+}
+
+.langBtn button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+  border-color: #aaa;
+}
+
+.langBtn button:active {
+  background-color: #ddd;
+}
+
+[class^="language-"] {
+  border-radius: 8px;
 }

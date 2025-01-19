@@ -1,14 +1,16 @@
-import React from "react";
 import "./Sidebar.css";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>Sidebar</h2>
+      <h2>Navigation</h2>
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Introduction</a>
+          </li>
+          <li>
+            <span>Algorithms</span>
           </li>
           <li>
             <a href="/constant">O(1)</a>

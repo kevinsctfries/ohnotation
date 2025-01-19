@@ -3,6 +3,10 @@ span {
   color: black;
 }
 
+.navBtns {
+  justify-content: flex-end;
+}
+
 ul {
   padding: 0.5rem;
 }

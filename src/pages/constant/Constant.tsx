@@ -10,6 +10,7 @@ import hljsCpp from "highlight.js/lib/languages/cpp";
 import hljsJava from "highlight.js/lib/languages/java";
 import hljsPython from "highlight.js/lib/languages/python";
 import hljsJavaScript from "highlight.js/lib/languages/javascript";
+import { Link } from "react-router-dom";
 
 hljs.registerLanguage("c", hljsC);
 hljs.registerLanguage("cpp", hljsCpp);
@@ -25,7 +26,7 @@ type ConstantExamples = {
   javascript: string;
 };
 
-const CodeExampleViewer = () => {
+const Constant = () => {
   const [language, setLanguage] =
     useState<keyof ConstantExamples>("javascript");
   const [codeContent, setCodeContent] = useState<string>("");
@@ -45,6 +46,14 @@ const CodeExampleViewer = () => {
 
   return (
     <div>
+      <div className="navBtns">
+        <Link to="/" className="navButton">
+          Previous Page
+        </Link>
+        <Link to="/linear" className="navButton">
+          Next Page
+        </Link>
+      </div>
       <h2>Understanding O(1)</h2>
       <div className="infoText">
         <p>
@@ -115,4 +124,4 @@ const CodeExampleViewer = () => {
   );
 };
 
-export default CodeExampleViewer;
+export default Constant;
