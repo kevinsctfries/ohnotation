@@ -1,33 +1,36 @@
-import React from "react";
 import "./Home.css";
+import BigONotationChart from "../../BigONotationChart";
 
 const Home = () => {
   return (
     <div className="home">
       <h2>What is Big O Notation?</h2>
-      <p>
-        Big O Notation is a way to describe the efficiency or performance of an
-        algorithm in terms of its time complexity or space complexity. It gives
-        an upper bound on the growth rate of an algorithm, helping to understand
-        how its performance changes as the size of the input data grows.
-      </p>
+      <div className="infoText">
+        <p>
+          Big O Notation is a way to describe the efficiency or performance of
+          an algorithm in terms of its <span>time complexity </span>or
+          <span> space complexity</span>. It gives an upper bound on the growth
+          rate of an algorithm, helping to understand how its performance
+          changes as the size of the input data grows.
+        </p>
+      </div>
       <h2>What is it used for?</h2>
-      <p>
-        Big O notation is primarily used to:
+      <div className="infoText">
+        <h3>Big O notation is primarily used to:</h3>
         <ul>
           <li>
             Estimate how long an algorithm will take to run as the input size
-            increases (Time Complexity).
+            increases <span>(Time Complexity)</span>.
           </li>
           <li>
             Estimate how much memory an algorithm will consume as the input size
-            increases (Space Complexity).
+            increases <span>(Space Complexity)</span>.
           </li>
         </ul>
-      </p>
+      </div>
       <h2>Things to know</h2>
-      <p>
-        Key Concepts:
+      <div className="infoText">
+        <h3>Key Concepts:</h3>
         <ul>
           <li>
             Input Size (n): Refers to the amount of data or the size of the
@@ -39,7 +42,7 @@ const Home = () => {
             as the input size grows.
           </li>
         </ul>
-      </p>
+      </div>
       <h2>Types of Big O Notation</h2>
       <table>
         <thead>
@@ -87,6 +90,8 @@ const Home = () => {
           </tr>
         </tbody>
       </table>
+      <h2>Comparing Big O Notations</h2>
+      <BigONotationChart />
     </div>
   );
 };

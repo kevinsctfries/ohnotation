@@ -1,3 +1,8 @@
+span {
+  font-weight: bold;
+  color: black;
+}
+
 ul {
   padding: 0.5rem;
 }
@@ -37,7 +42,7 @@ tbody > tr:nth-of-type(even) {
 }
 
 tbody > tr:nth-of-type(odd) {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
 }
 
 tbody > tr:hover {

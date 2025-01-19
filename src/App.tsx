@@ -14,7 +14,9 @@ function App() {
         <div className="app">
           <Sidebar />
           <div className="content">
-            <h1>Oh Notation</h1>
+            <h1>
+              Oh, No<span className="title">tation</span>
+            </h1>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/constant" element={<Constant />} />
