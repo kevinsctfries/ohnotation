@@ -46,14 +46,6 @@ const Logarithmic = () => {
 
   return (
     <div>
-      <div className="navBtns">
-        <Link to="/quadratic" className="navButton">
-          Previous Page
-        </Link>
-        <Link to="/logarithmic" className="navButton">
-          Next Page
-        </Link>
-      </div>
       <h2>What is O(log n)?</h2>
       <div className="infoText">
         <p>

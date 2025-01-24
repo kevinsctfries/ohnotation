@@ -1,15 +1,8 @@
 import "./Home.css";
-import { Link } from "react-router-dom";
-import BigONotationChart from "../../BigONotationChart";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="navBtns">
-        <Link to="/constant" className="navButton">
-          Next Page
-        </Link>
-      </div>
       <h2>What is Big O Notation?</h2>
       <div className="infoText">
         <p>
@@ -103,7 +96,11 @@ const Home = () => {
         </tbody>
       </table>
       <h2>Comparing Big O Notations</h2>
-      <BigONotationChart />
+      <img
+        className="tempImg"
+        src="https://cdn-media-1.freecodecamp.org/images/1*KfZYFUT2OKfjekJlCeYvuQ.jpeg"
+        alt="graph"
+      />
     </div>
   );
 };

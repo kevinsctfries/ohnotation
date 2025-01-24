@@ -1,0 +1,28 @@
+.navButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 5rem;
+  box-sizing: border-box;
+}
+
+.navButtons button {
+  padding: 10px 20px;
+  font-size: 1.125rem;
+  background-color: var(--clr-primary-a20);
+  border-radius: 5px;
+  color: var(--clr-dark-a0);
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 120px;
+}
+
+.navButtons button:hover {
+  background-color: var(--clr-primary-a30);
+}
+
+.navButtons button:disabled {
+  visibility: hidden;
+  cursor: not-allowed;
+}

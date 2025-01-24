@@ -45,27 +45,20 @@ const Linear = () => {
 
   return (
     <div>
-      <div className="navBtns">
-        <Link to="/constant" className="navButton">
-          Previous Page
-        </Link>
-        <Link to="/quadratic" className="navButton">
-          Next Page
-        </Link>
-      </div>
       <h2>Understanding O(n)</h2>
       <div className="infoText">
         <p>
-          O(n) describes the time complexity of an algorithm that grows linearly
-          with the size of the input. This means that if the size of the input
-          doubles, the execution time will also roughly double.
+          O(n) time complexity refers to algorithms whose execution time grows
+          linearly with respect to the size of the input. This means that if the
+          input size (denoted as n) doubles, the time it takes for the algorithm
+          to execute also roughly doubles.
         </p>
         <br />
         <p>
-          O(n) represents the running time of an algorithm that grows in
-          proportion to the size of the input (n). In simple terms, O(n) means
-          that the time it takes to run the algorithm increase slinearly as the
-          size of the input increases.
+          In simpler terms, if you have a problem where you need to process or
+          evaluate each element in the input data, and the amount of time it
+          takes to process all the elements is directly proportional to the
+          number of elements, then the algorithm is O(n).
         </p>
       </div>
       <h2>Key Characteristics of O(n)</h2>
@@ -95,6 +88,10 @@ const Linear = () => {
             </p>
           </li>
         </ul>
+      </div>
+      <h2>Code Example</h2>
+      <div className="infoText">
+        <p>code example</p>
       </div>
       <h3>Choose a Language</h3>
       <div className="langBtn">

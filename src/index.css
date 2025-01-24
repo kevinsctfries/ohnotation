@@ -7,5 +7,35 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: #ecf0f1;
+  background-color: var(--clr-surface-a0);
+  color: var(--clr-light-a0);
+}
+
+:root {
+  --clr-dark-a0: #000000;
+  --clr-light-a0: #ffffff;
+
+  /* Dark theme primary colors */
+  --clr-primary-a0: #5874ad;
+  --clr-primary-a10: #6b82b6;
+  --clr-primary-a20: #7e91bf;
+  --clr-primary-a30: #90a0c8;
+  --clr-primary-a40: #a3afd1;
+  --clr-primary-a50: #b5bfda;
+
+  /* Dark theme surface colors */
+  --clr-surface-a0: #121212;
+  --clr-surface-a10: #282828;
+  --clr-surface-a20: #3f3f3f;
+  --clr-surface-a30: #575757;
+  --clr-surface-a40: #717171;
+  --clr-surface-a50: #8b8b8b;
+
+  /* Dark theme tonal surface colors */
+  --clr-surface-tonal-a0: #1a1b20;
+  --clr-surface-tonal-a10: #2f3035;
+  --clr-surface-tonal-a20: #45464b;
+  --clr-surface-tonal-a30: #5d5e62;
+  --clr-surface-tonal-a40: #76777a;
+  --clr-surface-tonal-a50: #909093;
 }

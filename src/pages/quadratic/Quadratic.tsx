@@ -46,14 +46,6 @@ const Quadratic = () => {
 
   return (
     <div>
-      <div className="navBtns">
-        <Link to="/linear" className="navButton">
-          Previous Page
-        </Link>
-        <Link to="/logarithmic" className="navButton">
-          Next Page
-        </Link>
-      </div>
       <h2>What is O(n^2)?</h2>
       <div className="infoText">
         <p>

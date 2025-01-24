@@ -1,26 +1,55 @@
-/* src/components/Sidebar.css */
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #ecf0f1;
-  color: black;
+  background-color: var(--clr-primary-a20);
+  color: var(--clr-dark-a0);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid black;
+  transition: left 0.3s ease;
+  border-bottom-right-radius: 5rem;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-tab {
+  position: fixed;
+  left: 0;
+  width: 4rem;
+  height: 10rem;
+  background-color: var(--clr-primary-a20);
+  color: var(--clr-dark-a0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 100;
+  transition: left 0.3s ease, transform 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.sidebar-tab.active {
+  left: 250px;
+  height: 4rem;
+  transition: 0.3s ease;
+}
+
+.sidebar-tab:hover {
+  background-color: var(--clr-primary-a30);
 }
 
 .sidebar h2 {
   margin-bottom: 20px;
   font-size: 24px;
   text-align: center;
-}
-
-.sidebar span {
-  border-bottom: 1px solid black;
 }
 
 .sidebar nav ul {
@@ -35,7 +64,8 @@
 .sidebar nav ul li a {
   color: black;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
+  margin: 1rem;
 }
 
 .sidebar nav ul li a:hover {
