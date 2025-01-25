@@ -1,54 +1,121 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
+import KeyboardDoubleArrowLeftRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftRounded";
+import KeyboardDoubleArrowRightRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowRightRounded";
 import "./Sidebar.css";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+  const tabRef = useRef<HTMLDivElement>(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+
+      if (
+        isSidebarOpen &&
+        sidebarRef.current &&
+        tabRef.current &&
+        !sidebarRef.current.contains(target) &&
+        !tabRef.current.contains(target)
+      ) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isSidebarOpen]);
+
   return (
     <div className="app">
       <div
+        ref={tabRef}
         className={`sidebar-tab ${isSidebarOpen ? "active" : ""}`}
         onClick={toggleSidebar}>
-        {isSidebarOpen ? "Close" : "Open"}
+        {isSidebarOpen ? (
+          <KeyboardDoubleArrowLeftRoundedIcon fontSize="large" />
+        ) : (
+          <KeyboardDoubleArrowRightRoundedIcon fontSize="large" />
+        )}
       </div>
-      <div className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
-        <h2>Navigation</h2>
+      <div
+        ref={sidebarRef}
+        className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
+        <h2 className="sidebarTitle">Navigation</h2>
         <nav>
           <ul>
             <li>
-              <a href="/">Introduction</a>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                Introduction
+              </NavLink>
             </li>
             <li>
               <span>Algorithms</span>
             </li>
             <li>
-              <a href="/constant">O(1)</a>
+              <NavLink
+                to="/constant"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(1)
+              </NavLink>
             </li>
             <li>
-              <a href="/linear">O(n)</a>
+              <NavLink
+                to="/linear"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(n)
+              </NavLink>
             </li>
             <li>
-              <a href="/quadratic">O(n^2)</a>
+              <NavLink
+                to="/quadratic"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(n^2)
+              </NavLink>
             </li>
             <li>
-              <a href="/logarithmic">O(log n)</a>
+              <NavLink
+                to="/logarithmic"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(log n)
+              </NavLink>
             </li>
             <li>
-              <a href="/linearithmic">O(n log n)</a>
+              <NavLink
+                to="/linearithmic"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(n log n)
+              </NavLink>
             </li>
             <li>
-              <a href="/exponential">O(2^n)</a>
+              <NavLink
+                to="/exponential"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(2^n)
+              </NavLink>
             </li>
             <li>
-              <a href="/factorial">O(n!)</a>
+              <NavLink
+                to="/factorial"
+                className={({ isActive }) => (isActive ? "active" : "")}>
+                O(n!)
+              </NavLink>
             </li>
           </ul>
         </nav>
         <span>Made by: kevinsctfries</span>
+        <br />
+        <span>CURRENTLY UNDER DEVELOPMENT!</span>
       </div>
     </div>
   );

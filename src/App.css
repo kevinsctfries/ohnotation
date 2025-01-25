@@ -7,19 +7,23 @@
 /* App Layout */
 .app {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  margin: 0 auto;
+  max-width: 75%;
 }
 
 .content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  margin-top: 4rem;
+  padding: 1rem;
 }
 
 /* Typography */
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -42,10 +46,13 @@ span {
   line-height: 150%;
   font-size: 1.25rem;
   padding: 1.5rem;
-  max-width: 80vw;
   margin: auto;
   background-color: var(--clr-surface-a10);
   border-radius: 8px;
+}
+
+.infoText:nth-of-type(odd) {
+  background-color: var(--clr-surface-a20);
 }
 
 .infoText h3 {
@@ -87,31 +94,59 @@ span {
   background-color: var(--clr-surface-a30);
 }
 
-/* Miscellaneous */
-.title {
-  margin: 1rem;
-  padding-left: 6rem;
-}
-
-.subTitle {
-  font-size: 1.25rem;
-  position: absolute;
-  top: 10px;
+/* Misc */
+.tempImg {
+  width: 50vw;
+  display: flex;
 }
 
 [class^="language-"] {
   border-radius: 8px;
-  width: 85%;
+  white-space: pre-wrap;
+  width: 100%;
   margin: auto;
   font-size: 1.125rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .app {
+    max-width: 100%;
+  }
+
+  .content {
+    margin: 0;
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
   .infoText {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .langBtn button {
+    width: 20%;
+  }
+
+  [class^="language-"] {
     font-size: 1.125rem;
-    max-width: 95vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 90vw;
+    font-size: 1.125rem;
+  }
+  .infoText p {
+    font-size: 1.125rem;
   }
   .tempImg {
-    max-width: 50%;
+    min-width: 75vw;
+  }
+
+  [class^="language-"] {
+    font-size: 1rem;
   }
 }

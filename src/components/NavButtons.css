@@ -1,28 +1,47 @@
+/* Navigation Buttons Layout */
 .navButtons {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 5rem;
   box-sizing: border-box;
 }
 
+/* Button Styles */
 .navButtons button {
-  padding: 10px 20px;
-  font-size: 1.125rem;
+  padding: 10px;
+  font-size: 2rem;
   background-color: var(--clr-primary-a20);
   border-radius: 5px;
   color: var(--clr-dark-a0);
   font-weight: normal;
   cursor: pointer;
   transition: all 0.2s ease;
-  width: 120px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Button Hover Effect */
 .navButtons button:hover {
   background-color: var(--clr-primary-a30);
 }
 
+/* Disabled Button */
 .navButtons button:disabled {
   visibility: hidden;
   cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  .navButtons {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navButtons {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
 }

@@ -10,7 +10,6 @@ import hljsCpp from "highlight.js/lib/languages/cpp";
 import hljsJava from "highlight.js/lib/languages/java";
 import hljsPython from "highlight.js/lib/languages/python";
 import hljsJavaScript from "highlight.js/lib/languages/javascript";
-import { Link } from "react-router-dom";
 
 hljs.registerLanguage("c", hljsC);
 hljs.registerLanguage("cpp", hljsCpp);

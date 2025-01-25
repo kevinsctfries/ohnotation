@@ -10,6 +10,7 @@ import Linearithmic from "./pages/linearithmic/Linearithmic";
 import Exponential from "./pages/Exponential/Exponential";
 import Factorial from "./pages/Factorial/Factorial";
 import NavButtons from "./components/NavButtons";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -18,16 +19,14 @@ function App() {
         <div className="app">
           <Sidebar />
           <div className="content">
-            <h1 className="title">
-              Oh, No<span className="subTitle">tation</span>
-            </h1>
+            <Header />
             <NavButtons />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/constant" element={<Constant />} />
               <Route path="/linear" element={<Linear />} />
-              <Route path="/logarithmic" element={<Logarithmic />} />
               <Route path="/quadratic" element={<Quadratic />} />
+              <Route path="/logarithmic" element={<Logarithmic />} />
               <Route path="/linearithmic" element={<Linearithmic />} />
               <Route path="/exponential" element={<Exponential />} />
               <Route path="/factorial" element={<Factorial />} />

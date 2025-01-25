@@ -1,55 +1,38 @@
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: -250px;
+  height: 100vh;
   width: 250px;
-  height: 100%;
-  background-color: var(--clr-primary-a20);
-  color: var(--clr-dark-a0);
-  padding: 20px;
+  color: var(--clr-light-a0);
   display: flex;
+  padding-left: 2rem;
   flex-direction: column;
-  transition: left 0.3s ease;
-  border-bottom-right-radius: 5rem;
+  justify-content: center;
+  overflow-y: auto;
+  z-index: 10;
 }
 
-.sidebar.active {
-  left: 0;
+.sidebar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  height: 65vh;
+  border-right: 1px solid var(--clr-light-a0);
 }
 
 .sidebar-tab {
-  position: fixed;
-  left: 0;
-  width: 4rem;
-  height: 10rem;
-  background-color: var(--clr-primary-a20);
-  color: var(--clr-dark-a0);
+  display: none;
+}
+
+.sidebar-tab svg {
+  pointer-events: none;
+}
+
+.sidebarTitle {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-left: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  z-index: 100;
-  transition: left 0.3s ease, transform 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.sidebar-tab.active {
-  left: 250px;
-  height: 4rem;
-  transition: 0.3s ease;
-}
-
-.sidebar-tab:hover {
-  background-color: var(--clr-primary-a30);
-}
-
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar nav ul {
@@ -58,20 +41,134 @@
 }
 
 .sidebar nav ul li {
-  margin: 15px 0;
+  margin: 1rem 0;
 }
 
 .sidebar nav ul li a {
-  color: black;
+  color: var(--clr-light-a0);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin: 1rem;
 }
 
 .sidebar nav ul li a:hover {
-  color: grey;
+  color: var(--clr-primary-a0);
+  text-decoration: underline;
 }
 
-.sidebar nav ul li a:active {
-  border-bottom: 1px solid black;
+.sidebar nav ul li a::before {
+  content: "";
+}
+
+.sidebar nav ul li a.active::before {
+  content: "▶";
+  margin-left: -1.5rem;
+  position: absolute;
+  font-size: 1rem;
+  color: var(--clr-primary-a0);
+}
+
+.sidebar nav ul li a.active {
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    position: sticky;
+    height: 100vh;
+    width: 250px;
+    color: var(--clr-light-a0);
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--clr-primary-a20);
+    color: var(--clr-dark-a0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    font-size: 1.125rem;
+  }
+
+  .sidebar::after {
+    content: none;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-tab {
+    display: flex;
+    position: fixed;
+    left: 0;
+    width: 4rem;
+    height: 6rem;
+    background-color: var(--clr-primary-a20);
+    color: var(--clr-dark-a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-left: 0;
+    border-bottom-right-radius: 5px;
+    z-index: 100;
+    transition: left 0.3s ease, transform 0.3s ease;
+    transition: 0.3s ease;
+    transform: translateY(4rem);
+  }
+
+  .sidebar-tab.active {
+    left: 250px;
+    height: 5rem;
+    transform: translateY(3rem);
+    transition: 0.3s ease;
+  }
+
+  .sidebar-tab:hover {
+    background-color: var(--clr-primary-a30);
+  }
+
+  .sidebar span {
+    color: var(--clr-dark-a0);
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-dark-a0);
+  }
+
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar nav ul li {
+    margin: 2rem 0;
+  }
+
+  .sidebar nav ul li a {
+    color: var(--clr-dark-a0);
+    text-decoration: none;
+  }
+
+  .sidebar nav ul li a:active {
+    border-bottom: 1px solid black;
+  }
+
+  .sidebar nav ul li a.active::before {
+    color: var(--clr-dark-a0);
+  }
 }

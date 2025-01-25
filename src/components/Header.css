@@ -1,0 +1,45 @@
+/* Header Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-surface-a10);
+  border-bottom: 1px solid var(--clr-surface-a30);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  padding: 0 2rem;
+  align-items: center;
+  height: 4rem;
+}
+
+/* Header Content */
+.title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subTitle {
+  font-size: 1.25rem;
+  position: absolute;
+  top: 0.5rem;
+  color: var(--clr-primary-a0);
+}
+
+/* Header Link */
+.headerLink {
+  text-decoration: none;
+  color: var(--clr-light-a0);
+}
+
+/* Menu Icon */
+.menuIcon {
+  color: var(--clr-light-a0);
+  cursor: pointer;
+}
+
+.menuIcon:hover {
+  transition: color 0.2s ease;
+  color: var(--clr-primary-a0);
+}
