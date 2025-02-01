@@ -27,19 +27,7 @@ header {
   color: var(--clr-primary-a0);
 }
 
-/* Header Link */
 .headerLink {
   text-decoration: none;
   color: var(--clr-light-a0);
-}
-
-/* Menu Icon */
-.menuIcon {
-  color: var(--clr-light-a0);
-  cursor: pointer;
-}
-
-.menuIcon:hover {
-  transition: color 0.2s ease;
-  color: var(--clr-primary-a0);
 }
