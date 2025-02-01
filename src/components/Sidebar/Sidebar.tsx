@@ -1,54 +1,53 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import KeyboardDoubleArrowLeftRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftRounded";
 import KeyboardDoubleArrowRightRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowRightRounded";
 import "./Sidebar.css";
 
-const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+const Sidebar = ({
+  isActive,
+  toggleSidebar,
+}: {
+  isActive: boolean;
+  toggleSidebar: () => void;
+}) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const tabRef = useRef<HTMLDivElement>(null);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Node;
-
       if (
-        isSidebarOpen &&
         sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node) &&
         tabRef.current &&
-        !sidebarRef.current.contains(target) &&
-        !tabRef.current.contains(target)
+        !tabRef.current.contains(event.target as Node)
       ) {
-        setIsSidebarOpen(false);
+        toggleSidebar();
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    if (isActive) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [isSidebarOpen]);
+  }, [isActive, toggleSidebar]);
 
   return (
     <div className="app">
       <div
         ref={tabRef}
-        className={`sidebar-tab ${isSidebarOpen ? "active" : ""}`}
+        className={`sidebar-tab ${isActive ? "active" : ""}`}
         onClick={toggleSidebar}>
-        {isSidebarOpen ? (
+        {isActive ? (
           <KeyboardDoubleArrowLeftRoundedIcon fontSize="large" />
         ) : (
           <KeyboardDoubleArrowRightRoundedIcon fontSize="large" />
         )}
       </div>
-      <div
-        ref={sidebarRef}
-        className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
+      <div ref={sidebarRef} className={`sidebar ${isActive ? "active" : ""}`}>
         <h2 className="sidebarTitle">Navigation</h2>
         <nav>
           <ul>
