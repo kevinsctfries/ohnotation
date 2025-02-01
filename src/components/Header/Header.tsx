@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import DropdownMenu from "./DropdownMenu";
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { useState } from "react";
 
 const Header = () => {

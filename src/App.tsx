@@ -1,5 +1,5 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Constant from "./pages/constant/Constant";
@@ -9,8 +9,8 @@ import Quadratic from "./pages/quadratic/Quadratic";
 import Linearithmic from "./pages/linearithmic/Linearithmic";
 import Exponential from "./pages/Exponential/Exponential";
 import Factorial from "./pages/Factorial/Factorial";
-import NavButtons from "./components/NavButtons";
-import Header from "./components/Header";
+import NavButtons from "./components/NavButtons/NavButtons";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
