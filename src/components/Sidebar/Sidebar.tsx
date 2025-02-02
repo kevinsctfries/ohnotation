@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded"; // Import icon
 import KeyboardDoubleArrowLeftRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftRounded";
 import KeyboardDoubleArrowRightRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowRightRounded";
 import "./Sidebar.css";
@@ -56,6 +57,7 @@ const Sidebar = ({
                 to="/"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 Introduction
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -66,6 +68,7 @@ const Sidebar = ({
                 to="/constant"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(1)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -73,6 +76,7 @@ const Sidebar = ({
                 to="/linear"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(n)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -80,6 +84,7 @@ const Sidebar = ({
                 to="/quadratic"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(n^2)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -87,6 +92,7 @@ const Sidebar = ({
                 to="/logarithmic"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(log n)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -94,6 +100,7 @@ const Sidebar = ({
                 to="/linearithmic"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(n log n)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -101,6 +108,7 @@ const Sidebar = ({
                 to="/exponential"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(2^n)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
             <li>
@@ -108,6 +116,7 @@ const Sidebar = ({
                 to="/factorial"
                 className={({ isActive }) => (isActive ? "active" : "")}>
                 O(n!)
+                <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
           </ul>
