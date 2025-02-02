@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import hljs from "highlight.js";
-import "highlight.js/styles/github.css";
+import "highlight.js/styles/github-dark.css";
 import "./Quadratic.css";
 
 import quadraticExamples from "./quadratic-examples.json";
