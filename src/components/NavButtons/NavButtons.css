@@ -2,8 +2,6 @@
 .navButtons {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* Button Styles */
@@ -12,6 +10,7 @@
   font-size: 2rem;
   background-color: var(--clr-primary-a20);
   border-radius: 5px;
+  border: 0;
   color: var(--clr-dark-a0);
   font-weight: normal;
   cursor: pointer;
