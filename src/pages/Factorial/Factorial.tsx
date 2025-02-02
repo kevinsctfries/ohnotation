@@ -124,6 +124,8 @@ const Factorial = () => {
         <p>code example</p>
       </div>
       <h3>Choose a Language</h3>
+
+      {/* Desktop: Buttons */}
       <div className="langBtn">
         <button onClick={() => setLanguage("javascript")}>JavaScript</button>
         <button onClick={() => setLanguage("c")}>C</button>
@@ -131,6 +133,21 @@ const Factorial = () => {
         <button onClick={() => setLanguage("java")}>Java</button>
         <button onClick={() => setLanguage("python")}>Python</button>
       </div>
+
+      {/* Mobile: Dropdown */}
+      <div className="langDropdown">
+        <select
+          onChange={e => setLanguage(e.target.value as keyof FactorialExamples)}
+          value={language}
+          aria-label="Choose a programming language">
+          <option value="javascript">JavaScript</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+        </select>
+      </div>
+
       <pre>
         <code ref={codeRef} className={`language-${language}`}>
           {codeContent}
