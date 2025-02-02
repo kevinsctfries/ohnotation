@@ -39,7 +39,7 @@ const Constant = () => {
     if (codeRef.current && codeContent) {
       codeRef.current.removeAttribute("data-highlighted");
 
-      hljs.highlightBlock(codeRef.current);
+      hljs.highlightElement(codeRef.current);
     }
   }, [codeContent]); // Re-run highlighting when `codeContent` changes
 
