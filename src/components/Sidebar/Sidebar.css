@@ -1,3 +1,4 @@
+/* Sidebar Layout */
 .sidebar {
   position: sticky;
   top: 0;
@@ -21,6 +22,7 @@
   border-right: 1px solid var(--clr-light-a0);
 }
 
+/* Sidebar Tab */
 .sidebar-tab {
   display: none;
 }
@@ -29,12 +31,14 @@
   pointer-events: none;
 }
 
+/* Sidebar Title */
 .sidebarTitle {
   display: flex;
   padding: 0;
   margin: 0;
 }
 
+/* Sidebar Navigation */
 .sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -49,6 +53,11 @@
   text-decoration: none;
   font-size: 1.25rem;
   margin: 1rem;
+  position: relative;
+}
+
+.sidebar nav ul li a.active {
+  font-weight: bold;
 }
 
 .sidebar nav ul li a:hover {
@@ -56,22 +65,22 @@
   text-decoration: underline;
 }
 
-.sidebar nav ul li a::before {
-  content: "";
-}
-
-.sidebar nav ul li a.active::before {
-  content: "▶";
-  margin-left: -1.5rem;
+.sidebar nav ul li a .icon {
+  visibility: hidden;
   position: absolute;
-  font-size: 1rem;
-  color: var(--clr-primary-a0);
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
 }
 
-.sidebar nav ul li a.active {
-  font-weight: bold;
+.sidebar nav ul li a.active .icon {
+  visibility: visible;
 }
 
+/* Media Queries */
+
+/* Desktop Layout */
 @media (max-width: 1200px) {
   .sidebar {
     position: sticky;
@@ -85,20 +94,18 @@
   }
 }
 
+/* Mobile Layout */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 0;
     left: -250px;
     width: 250px;
-    height: 100%;
+    height: 100vh;
     background-color: var(--clr-primary-a20);
     color: var(--clr-dark-a0);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    padding: 1.5rem;
     transition: left 0.3s ease;
-    font-size: 1.125rem;
+    font-size: 100%;
   }
 
   .sidebar::after {
@@ -125,7 +132,6 @@
     border-bottom-right-radius: 5px;
     z-index: 100;
     transition: left 0.3s ease, transform 0.3s ease;
-    transition: 0.3s ease;
     transform: translateY(4rem);
   }
 
@@ -145,7 +151,6 @@
   }
 
   .sidebar h2 {
-    margin-bottom: 20px;
     text-align: center;
     border-bottom: 1px solid var(--clr-dark-a0);
   }
@@ -162,13 +167,14 @@
   .sidebar nav ul li a {
     color: var(--clr-dark-a0);
     text-decoration: none;
+    font-size: 100%;
   }
 
   .sidebar nav ul li a:active {
     border-bottom: 1px solid black;
   }
 
-  .sidebar nav ul li a.active::before {
+  .sidebar nav ul li a.active .icon {
     color: var(--clr-dark-a0);
   }
 }
