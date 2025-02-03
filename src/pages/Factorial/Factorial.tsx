@@ -145,6 +145,7 @@ const Factorial = () => {
           </pre>
         </div>
       </div>
+
       <h2>Use Cases of O(n!)</h2>
       <div className="infoText">
         <ul>
