@@ -61,6 +61,15 @@ span {
   border: none;
 }
 
+.infoText p {
+  padding: 1rem 0;
+}
+
+.codeHighlight h3 {
+  text-align: right;
+  font-size: 1.25rem;
+}
+
 /* Language Button Group */
 .langDropdown {
   display: none;
@@ -76,7 +85,7 @@ span {
 .langBtn button {
   padding: 10px 20px;
   font-size: 1.125rem;
-  background-color: var(--clr-surface-a20);
+  background-color: var(--clr-surface-a10);
   border-radius: 5px;
   color: var(--clr-light-a0);
   font-weight: normal;

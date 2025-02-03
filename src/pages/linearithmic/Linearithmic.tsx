@@ -48,103 +48,163 @@ const Linearithmic = () => {
       <h2>Understanding O(n log n)</h2>
       <div className="infoText">
         <p>
-          O(n log n) time complexity, often referred to as linearithmic time,
-          represents algorithms whose execution time grows at a rate
-          proportional to n (the size of the input) multiplied by the logarithm
-          of n. This complexity is common in algorithms that break down problems
-          into smaller subproblems (using a divide-and-conquer approach) and
-          then combine the results. Although it is more complex than linear time
-          (O(n)), O(n log n) is still much more efficient than quadratic time
-          (O(n^2)) and is considered highly scalable for large datasets.
+          O(n log n), or linearithmic time, describes an algorithm whose time
+          complexity grows at a rate that combines both linear and logarithmic
+          growth. This means that for each item in the input, the algorithm does
+          work that grows logarithmically with respect to the size of the input.
+          The total time taken by the algorithm is a product of linear time
+          (O(n)) and logarithmic time (O(log n)), resulting in a complexity of
+          O(n log n). These types of algorithms are typically more efficient
+          than quadratic algorithms (O(n²)), especially as the size of the input
+          increases.
         </p>
       </div>
       <h2>Key Characteristics of O(n log n)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Moderately Efficient: </span>
+            <span>Combination of Linear and Logarithmic Growth:</span>
             <p>
-              O(n log n) algorithms scale well with large datasets, offering
-              better performance than quadratic algorithms (O(n²)) but slower
-              than linear algorithms (O(n)).
+              The time complexity of O(n log n) grows faster than linear time
+              (O(n)), but much slower than quadratic time (O(n²)). It occurs
+              when you perform a logarithmic operation (such as dividing the
+              problem in half) for each element in a collection. The algorithm
+              does some work for each element, but that work involves a
+              logarithmic amount of steps.
             </p>
           </li>
           <li>
-            <span>Divide-and-Conquer: </span>
+            <span>Efficient for Large Inputs:</span>
             <p>
-              Many O(n log n) algorithms employ a divide-and-conquer strategy,
-              where the input data is repeatedly divided into smaller subsets
-              (log n), and the results of those subsets are combined (n). This
-              combination of linear and logarithmic operations leads to an
-              efficient solution.
+              Algorithms with O(n log n) time complexity are more efficient than
+              quadratic algorithms (O(n²)) for large datasets. The combination
+              of linear and logarithmic growth means that they scale well as
+              input size increases, offering a significant performance
+              improvement over less efficient algorithms.
+            </p>
+          </li>
+          <li>
+            <span>Divide and Conquer Approach:</span>
+            <p>
+              Many O(n log n) algorithms are based on the divide and conquer
+              strategy, which breaks the problem into smaller sub-problems,
+              solves them independently, and then combines the results. The
+              logarithmic factor often arises from the way the problem is
+              recursively divided.
             </p>
           </li>
         </ul>
       </div>
       <h2>Code Example</h2>
       <div className="infoText">
-        <p>code example</p>
-      </div>
-      <h3>Choose a Language</h3>
+        <div className="codeHighlight">
+          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <h3>Choose a Language</h3>
 
-      {/* Desktop: Buttons */}
-      <div className="langBtn">
-        <button onClick={() => setLanguage("javascript")}>JavaScript</button>
-        <button onClick={() => setLanguage("c")}>C</button>
-        <button onClick={() => setLanguage("cpp")}>C++</button>
-        <button onClick={() => setLanguage("java")}>Java</button>
-        <button onClick={() => setLanguage("python")}>Python</button>
+          {/* Desktop: Buttons */}
+          <div className="langBtn">
+            <button onClick={() => setLanguage("javascript")}>
+              JavaScript
+            </button>
+            <button onClick={() => setLanguage("c")}>C</button>
+            <button onClick={() => setLanguage("cpp")}>C++</button>
+            <button onClick={() => setLanguage("java")}>Java</button>
+            <button onClick={() => setLanguage("python")}>Python</button>
+          </div>
+
+          {/* Mobile: Dropdown */}
+          <div className="langDropdown">
+            <select
+              onChange={e =>
+                setLanguage(e.target.value as keyof LinearithmicExamples)
+              }
+              value={language}
+              aria-label="Choose a programming language">
+              <option value="javascript">JavaScript</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+            </select>
+          </div>
+
+          <pre>
+            <code ref={codeRef} className={`language-${language}`}>
+              {codeContent}
+            </code>
+          </pre>
+        </div>
       </div>
 
-      {/* Mobile: Dropdown */}
-      <div className="langDropdown">
-        <select
-          onChange={e =>
-            setLanguage(e.target.value as keyof LinearithmicExamples)
-          }
-          value={language}
-          aria-label="Choose a programming language">
-          <option value="javascript">JavaScript</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-        </select>
-      </div>
-
-      <pre>
-        <code ref={codeRef} className={`language-${language}`}>
-          {codeContent}
-        </code>
-      </pre>
-      <h2>Additional Examples of O(n log n) Algorithms</h2>
+      <h2>Use Cases of O(n log n)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Merge Sort:</span>
+            <span>Sorting Algorithms:</span>
+            <ul>
+              <li>
+                <span>Merge Sort:</span>
+                <p>
+                  A divide-and-conquer algorithm that splits the array into
+                  smaller sub-arrays, sorts them, and then merges them back
+                  together in O(n log n) time.
+                </p>
+              </li>
+              <li>
+                <span>Quick Sort:</span>
+                <p>
+                  Another divide-and-conquer algorithm that chooses a pivot,
+                  partitions the array around the pivot, and then recursively
+                  sorts the partitions. On average, it has O(n log n) time
+                  complexity, although its worst-case complexity can be O(n²).
+                </p>
+              </li>
+              <li>
+                <span>Heap Sort:</span>
+                <p>
+                  A sorting algorithm that uses a binary heap to sort elements.
+                  It maintains a heap structure, and each element is extracted
+                  in O(log n) time, leading to O(n log n) total complexity.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Efficient Searching and Merging:</span>
             <p>
-              A sorting algorithm that divides the input in half, recursively
-              sorts each half, and then merges them.
+              Many algorithms that combine sorting with searching or merging
+              tasks also run in O(n log n) time. For example, binary search
+              trees that require O(log n) time for each operation can use these
+              methods to efficiently find or merge elements in O(n log n) time.
             </p>
           </li>
           <li>
-            <span>Quick Sort:</span>
+            <span>Divide and Conquer Algorithms:</span>
             <p>
-              Another sorting algorithm that partitions the input data and
-              recursively sorts each partition.
+              Algorithms like merge sort, quick sort, and closest pair of points
+              often follow the divide and conquer approach. These algorithms
+              divide the problem into sub-problems and then combine the results
+              efficiently in O(n log n) time.
             </p>
           </li>
           <li>
-            <span>Heap Sort: </span>
-            <p>Sorts data using a binary heap structure.</p>
+            <span>Graph Algorithms:</span>
+            <p>
+              Some graph traversal algorithms and minimum spanning tree
+              algorithms, like Kruskal's algorithm or Prim's algorithm (using
+              heaps), also exhibit O(n log n) time complexity. These algorithms
+              often need to manage or process large sets of edges and nodes
+              efficiently.
+            </p>
           </li>
           <li>
-            <span>Balanced Binary Search Trees (BST):</span>
+            <span>Data Structures and Operations:</span>
             <p>
-              Operations such as insert, delete, and search in balanced trees
-              (e.g., AVL trees, Red-Black trees) typically operate in O(log n)
-              time for each operation, and for n elements, the total time is O(n
-              log n).
+              Operations on certain data structures, such as balanced binary
+              search trees (e.g., AVL trees, Red-Black trees) and heaps, often
+              run in O(n log n) time. These data structures maintain balance or
+              order through logarithmic operations and can perform operations
+              like insertion and deletion in logarithmic time for each element.
             </p>
           </li>
         </ul>

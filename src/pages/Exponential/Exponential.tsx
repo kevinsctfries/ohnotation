@@ -45,120 +45,139 @@ const Exponential = () => {
 
   return (
     <div>
-      <h2>Understanding O(2^n)</h2>
+      <h2>Understanding O(2ⁿ)</h2>
       <div className="infoText">
         <p>
-          O(2^n), or exponential time complexity, refers to algorithms whose
-          execution time doubles with each additional element in the input. This
-          type of complexity is typically seen in problems that require
-          evaluating all possible combinations or solutions, where the number of
-          possibilities grows exponentially with the size of the input. As a
-          result, algorithms with O(2^n) complexity become very inefficient for
-          large datasets, as their running time grows extremely fast.
+          O(2ⁿ) describes an exponential time complexity, meaning that the time
+          it takes to run an algorithm doubles with every additional element in
+          the input. This is considered one of the least efficient time
+          complexities, as the number of operations grows extremely quickly as
+          the size of the input increases. This growth is much faster than
+          linear (O(n)) or even logarithmic (O(log n)) growth. For example, an
+          algorithm with O(2ⁿ) will take 2 operations for 1 input, 4 operations
+          for 2 inputs, 8 operations for 3 inputs, and so on.
         </p>
       </div>
-      <h2>Key Characteristics of O(2^n)</h2>
+      <h2>Key Characteristics of O(2ⁿ)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Extremely Inefficient for Large Inputs:</span>
+            <span>Exponential Growth:</span>
             <p>
-              O(2^n) algorithms grow at a rapid, exponential rate, meaning that
-              even small increases in the size of the input can lead to an
-              explosion in execution time. These algorithms are generally
-              impractical for large datasets, as they can become prohibitively
-              slow.
+              The running time of an algorithm with O(2ⁿ) doubles with each
+              additional input element. This causes an explosion in computation
+              as n increases, making the algorithm impractical for large input
+              sizes.
             </p>
           </li>
           <li>
-            <span>Brute-Force Solutions:</span>
+            <span>Slow for Large Inputs:</span>
             <p>
-              Many algorithms with O(2^n) time complexity rely on brute-force
-              methods, evaluating all possible solutions or configurations. This
-              can include problems like the traveling salesman problem, where
-              all possible routes must be checked to find the optimal solution.
+              Algorithms with O(2ⁿ) can handle only small input sizes
+              efficiently. As n increases, the number of operations increases at
+              a rapid rate, so they become infeasible for real-world use when n
+              is large.
             </p>
           </li>
           <li>
-            <span>No Efficient Solution for Large Inputs:</span>
+            <span>Recursion and Branching:</span>
             <p>
-              Unlike O(n), O(n log n), or O(n²) algorithms, O(2^n) algorithms
-              typically do not have a known efficient solution for large inputs.
-              As n increases, the time to compute solutions grows so rapidly
-              that even powerful machines may struggle to finish the computation
-              in a reasonable amount of time.
+              Exponential time complexity often occurs in recursive algorithms
+              that branch into multiple sub-problems. Each branch itself can
+              split into more branches, leading to an exponential number of
+              recursive calls.
+            </p>
+          </li>
+          <li>
+            <span>Inefficient for Large Data:</span>
+            <p>
+              While these algorithms can sometimes be useful for small datasets
+              or where no better solutions exist, they are typically considered
+              inefficient for problems with larger datasets.
             </p>
           </li>
         </ul>
       </div>
       <h2>Code Example</h2>
       <div className="infoText">
-        <p>code example</p>
-      </div>
-      <h3>Choose a Language</h3>
+        <div className="codeHighlight">
+          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <h3>Choose a Language</h3>
 
-      {/* Desktop: Buttons */}
-      <div className="langBtn">
-        <button onClick={() => setLanguage("javascript")}>JavaScript</button>
-        <button onClick={() => setLanguage("c")}>C</button>
-        <button onClick={() => setLanguage("cpp")}>C++</button>
-        <button onClick={() => setLanguage("java")}>Java</button>
-        <button onClick={() => setLanguage("python")}>Python</button>
+          {/* Desktop: Buttons */}
+          <div className="langBtn">
+            <button onClick={() => setLanguage("javascript")}>
+              JavaScript
+            </button>
+            <button onClick={() => setLanguage("c")}>C</button>
+            <button onClick={() => setLanguage("cpp")}>C++</button>
+            <button onClick={() => setLanguage("java")}>Java</button>
+            <button onClick={() => setLanguage("python")}>Python</button>
+          </div>
+
+          {/* Mobile: Dropdown */}
+          <div className="langDropdown">
+            <select
+              onChange={e =>
+                setLanguage(e.target.value as keyof ExponentialExamples)
+              }
+              value={language}
+              aria-label="Choose a programming language">
+              <option value="javascript">JavaScript</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+            </select>
+          </div>
+
+          <pre>
+            <code ref={codeRef} className={`language-${language}`}>
+              {codeContent}
+            </code>
+          </pre>
+        </div>
       </div>
 
-      {/* Mobile: Dropdown */}
-      <div className="langDropdown">
-        <select
-          onChange={e =>
-            setLanguage(e.target.value as keyof ExponentialExamples)
-          }
-          value={language}
-          aria-label="Choose a programming language">
-          <option value="javascript">JavaScript</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-        </select>
-      </div>
-
-      <pre>
-        <code ref={codeRef} className={`language-${language}`}>
-          {codeContent}
-        </code>
-      </pre>
-      <h2>Additional Examples of O(2^n) Algorithms</h2>
+      <h2>Use Cases of O(2ⁿ)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Brute-Force Search in Combinatorial Problems:</span>
+            <span>Recursive Algorithms:</span>
             <p>
-              In problems like the <span>knapsack problem</span> or
-              <span> subset sum problem</span>, where every combination of
-              elements is evaluated.
+              A classic example of O(2ⁿ) time complexity is the recursive
+              solution to the Fibonacci sequence without memoization. The
+              recursive calls for each Fibonacci number grow exponentially as
+              each call generates two additional calls.
             </p>
           </li>
           <li>
-            <span>Recursive Solutions to Certain Problems:</span>
+            <span>Power Set:</span>
             <p>
-              Some recursive algorithms, especially those that solve problems
-              like generating all subsets or permutations of a set (e.g.,
-              generating power sets of a set), exhibit O(2^n) complexity.
+              The power set problem involves generating all subsets of a given
+              set. If you have a set of n elements, there are 2ⁿ possible
+              subsets. The time complexity to generate all subsets is O(2ⁿ), as
+              you need to consider each subset.
             </p>
           </li>
           <li>
-            <span>Certain Backtracking Algorithms:</span>
+            <span>Combinatorial Problems:</span>
             <p>
-              For problems such as solving the <span>N-Queens problem</span> or
-              <span> Sudoku</span> using backtracking, where each possible
-              configuration is explored.
+              Many combinatorial problems, such as finding all possible
+              solutions to the traveling salesman problem or solving certain
+              types of puzzles, have an O(2ⁿ) complexity because they involve
+              exploring all possible combinations or permutations of the input
+              data.
             </p>
           </li>
           <li>
-            <span>Recursive Fibonacci Calculation (without memoization):</span>
+            <span>Brute Force Solutions:</span>
             <p>
-              A naive recursive solution to calculate Fibonacci numbers results
-              in repeated recalculations, leading to O(2^n) complexity.
+              In problems where there is no known efficient algorithm,
+              brute-force solutions that explore all possibilities may result in
+              O(2ⁿ) complexity. This is often seen in exhaustive search
+              algorithms where each element in the input has two choices
+              (included or not included).
             </p>
           </li>
         </ul>
