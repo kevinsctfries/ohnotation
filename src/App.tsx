@@ -12,6 +12,7 @@ import Exponential from "./pages/Exponential/Exponential";
 import Factorial from "./pages/Factorial/Factorial";
 import NavButtons from "./components/NavButtons/NavButtons";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -21,25 +22,28 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="app">
-        <Sidebar isActive={isSidebarActive} toggleSidebar={toggleSidebar} />
-        <div className="content">
-          <Header />
-          <NavButtons />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/constant" element={<Constant />} />
-            <Route path="/linear" element={<Linear />} />
-            <Route path="/quadratic" element={<Quadratic />} />
-            <Route path="/logarithmic" element={<Logarithmic />} />
-            <Route path="/linearithmic" element={<Linearithmic />} />
-            <Route path="/exponential" element={<Exponential />} />
-            <Route path="/factorial" element={<Factorial />} />
-          </Routes>
+    <div>
+      <Router>
+        <div className="app">
+          <Sidebar isActive={isSidebarActive} toggleSidebar={toggleSidebar} />
+          <div className="content">
+            <Header />
+            <NavButtons />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/constant" element={<Constant />} />
+              <Route path="/linear" element={<Linear />} />
+              <Route path="/quadratic" element={<Quadratic />} />
+              <Route path="/logarithmic" element={<Logarithmic />} />
+              <Route path="/linearithmic" element={<Linearithmic />} />
+              <Route path="/exponential" element={<Exponential />} />
+              <Route path="/factorial" element={<Factorial />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import hljs from "highlight.js";
-import "highlight.js/styles/github.css";
+import "highlight.js/styles/github-dark.css";
 import "./Quadratic.css";
 
 import quadraticExamples from "./quadratic-examples.json";
@@ -45,89 +45,145 @@ const Quadratic = () => {
 
   return (
     <div>
-      <h2>What is O(n^2)?</h2>
+      <h2>What is O(n²)?</h2>
       <div className="infoText">
         <p>
-          In Big-O Notation, O(n²) (pronounced "O of n squared") describes the
-          time complexity of an algorithm whose performance grows quadratically
-          with the size of the input (n).
+          O(n²), or quadratic time, refers to an operation where the time it
+          takes to complete grows as the square of the size of the input. This
+          means that if you double the size of the input, the time required to
+          complete the task will quadruple. The growth of the time is not
+          linear, but instead increases much faster as the input size increases.
+          O(n²) operations are common in algorithms that involve nested loops,
+          where one loop iterates over the dataset and the other loop iterates
+          over the dataset for each element in the first loop.
         </p>
       </div>
       <h2>Key Characteristics of O(n^2)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Quadratic Time Complexity:</span>
+            <span>Squared Growth:</span>
             <p>
-              The running time of an O(n^2) algorithm grows proportional to the
-              square of the size of the input. For example, if the input size
-              doubles, the execution time increases roughly by a factor of four.
-              This is due to the fact that two nested iterations are often
-              involved, where each iteration loops over the entire input.
+              In O(n²) operations, the time taken grows at a rate proportional
+              to the square of the input size. If the input size doubles, the
+              time required increases by four times. This means that the time
+              complexity grows much faster than linear time (O(n)) as the size
+              of the input increases.
             </p>
           </li>
           <li>
             <span>Nested Loops:</span>
             <p>
-              Algorithms with O(n^2) complexity typically contain two nested
-              loops. The outer loop runs <span>n</span> times, and for each
-              iteration of the outer loops, the inner loop runs <span>n </span>
-              times. This results in a total of approximately
-              <span> n * n </span>
-              iterations, leading to quadratic growth in execution time.
+              O(n²) operations typically involve two nested loops that iterate
+              over the dataset. For each item in the first loop, the second loop
+              iterates through the entire dataset, leading to a total of n * n
+              steps.
             </p>
           </li>
           <li>
-            <span>Input-Dependent Growth:</span>
+            <span>Inefficient for Large Inputs:</span>
             <p>
-              The time required to complete the task grows significantly as the
-              input size increases. While small input sizes may still be
-              manageable, large inputs can cause performance bottlenecks.
+              Because the time grows quadratically, O(n²) algorithms can become
+              very slow when the input size is large. While they may work fine
+              with small datasets, their performance degrades quickly as the
+              dataset increases in size.
             </p>
           </li>
           <li>
-            <span>Less Efficient for Larger Data:</span>
+            <span>Increased Complexity:</span>
             <p>
-              Algorithms with O(n^2) complexity tend to perform poorly on large
-              datasets. For example, in sorting algorithms like
-              <span> bubble sort</span>, the quadratic nature of the algorithm
-              makes them inefficient compared to algorithms like
-              <span> quick sort</span> or <span>merge sort</span>, which have
-              O(n log n) complexity.
+              Quadratic time complexity indicates that the problem is more
+              complex than linear time problems. It generally happens in
+              algorithms where comparisons or checks need to be made between
+              multiple pairs of elements in the dataset.
             </p>
           </li>
         </ul>
       </div>
-      <h3>Choose a Language</h3>
+      <h2>Code Example</h2>
+      <div className="infoText">
+        <div className="codeHighlight">
+          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <h3>Choose a Language</h3>
 
-      {/* Desktop: Buttons */}
-      <div className="langBtn">
-        <button onClick={() => setLanguage("javascript")}>JavaScript</button>
-        <button onClick={() => setLanguage("c")}>C</button>
-        <button onClick={() => setLanguage("cpp")}>C++</button>
-        <button onClick={() => setLanguage("java")}>Java</button>
-        <button onClick={() => setLanguage("python")}>Python</button>
+          {/* Desktop: Buttons */}
+          <div className="langBtn">
+            <button onClick={() => setLanguage("javascript")}>
+              JavaScript
+            </button>
+            <button onClick={() => setLanguage("c")}>C</button>
+            <button onClick={() => setLanguage("cpp")}>C++</button>
+            <button onClick={() => setLanguage("java")}>Java</button>
+            <button onClick={() => setLanguage("python")}>Python</button>
+          </div>
+
+          {/* Mobile: Dropdown */}
+          <div className="langDropdown">
+            <select
+              onChange={e =>
+                setLanguage(e.target.value as keyof QuadraticExamples)
+              }
+              value={language}
+              aria-label="Choose a programming language">
+              <option value="javascript">JavaScript</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+            </select>
+          </div>
+
+          <pre>
+            <code ref={codeRef} className={`language-${language}`}>
+              {codeContent}
+            </code>
+          </pre>
+        </div>
       </div>
 
-      {/* Mobile: Dropdown */}
-      <div className="langDropdown">
-        <select
-          onChange={e => setLanguage(e.target.value as keyof QuadraticExamples)}
-          value={language}
-          aria-label="Choose a programming language">
-          <option value="javascript">JavaScript</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-        </select>
+      <h2>Use Cases of O(n²)</h2>
+      <div className="infoText">
+        <ul>
+          <li>
+            <span>Bubble Sort:</span>
+            <p>
+              One of the classic examples of an O(n²) algorithm is Bubble Sort.
+              In this algorithm, each element in the array is compared with
+              every other element to sort them. The first loop runs n times, and
+              for each iteration, the second loop also runs n times, resulting
+              in a time complexity of O(n²).
+            </p>
+          </li>
+          <li>
+            <span>Selection Sort:</span>
+            <p>
+              Selection Sort is another sorting algorithm that works in O(n²)
+              time. It repeatedly selects the smallest (or largest) element from
+              the unsorted part of the list and swaps it with the element at the
+              current position. This involves a nested loop that results in
+              quadratic time complexity.
+            </p>
+          </li>
+          <li>
+            <span>Inserting All Pairs of Items into a Data Structure:</span>
+            <p>
+              In cases where you need to insert all pairs of items from a
+              dataset into a structure (like finding all possible pairs of
+              elements in an array), this will often require nested iterations,
+              leading to O(n²) complexity.
+            </p>
+          </li>
+          <li>
+            <span>Matrix Multiplication:</span>
+            <p>
+              When multiplying two matrices, the operation involves iterating
+              over rows and columns, which results in nested loops. The time
+              complexity for this type of operation can be O(n²) in many simple
+              matrix algorithms.
+            </p>
+          </li>
+        </ul>
       </div>
-
-      <pre>
-        <code ref={codeRef} className={`language-${language}`}>
-          {codeContent}
-        </code>
-      </pre>
     </div>
   );
 };

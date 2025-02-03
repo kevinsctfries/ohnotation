@@ -1,7 +1,7 @@
 {
-  "c": "DUMMY CODE",
-  "cpp": "DUMMY CODE",
-  "java": "DUMMY CODE",
-  "python": "DUMMY CODE",
-  "javascript": "DUMMY CODE"
+  "javascript": "function fibonacci(n) {\n    if (n <= 1) return n;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Example usage:\nconsole.log(fibonacci(10)); // Output: 55",
+  "c": "#include <stdio.h>\n\nint fibonacci(int n) {\n    if (n <= 1) return n;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nint main() {\n    printf(\"Fibonacci of 10: %d\\n\", fibonacci(10)); // Output: 55\n    return 0;\n}",
+  "cpp": "#include <iostream>\n\nusing namespace std;\n\nint fibonacci(int n) {\n    if (n <= 1) return n;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nint main() {\n    cout << \"Fibonacci of 10: \" << fibonacci(10) << endl; // Output: 55\n    return 0;\n}",
+  "java": "public class Fibonacci {\n    public static int fibonacci(int n) {\n        if (n <= 1) return n;\n        return fibonacci(n - 1) + fibonacci(n - 2);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(\"Fibonacci of 10: \" + fibonacci(10)); // Output: 55\n    }\n}",
+  "python": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Example usage:\nprint(fibonacci(10))  # Output: 55"
 }

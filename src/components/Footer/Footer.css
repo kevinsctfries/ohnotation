@@ -1,0 +1,18 @@
+footer {
+  display: flex;
+  background-color: var(--clr-surface-a10);
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--clr-surface-a30);
+}
+
+footer div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}

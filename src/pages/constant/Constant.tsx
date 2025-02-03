@@ -48,26 +48,13 @@ const Constant = () => {
       <h2>Understanding O(1)</h2>
       <div className="infoText">
         <p>
-          <span>O(1)</span>, or <span>constant time complexity</span>, refers to
-          operations that take the same amount of time to execute, regardless of
-          the size of the input. This means that no matter how large or small
-          the dataset is, the execution time remains fixed and does not scale
-          with the size of the input.
+          O(1), or constant time, refers to an operation in which the time it
+          takes to complete does not depend on the size of the input. In other
+          words, whether you're working with a small dataset or a very large
+          one, the operation will always take the same amount of time. This
+          makes O(1) operations highly efficient because they don't require any
+          additional time as the size of the data grows.
         </p>
-        <br />
-        <p>
-          Constant time operations are considered the gold standard in algorithm
-          design because they provide the best possible efficiency. Examples of
-          <span> O(1)</span> operations include:
-        </p>
-        <ul>
-          <li>Accessing a specific element in an array by its index.</li>
-          <li>
-            Fetching a value from a hash table using a key (in ideal conditions
-            without collisions).
-          </li>
-          <li>Checking if a number is even or odd using modulo (%).</li>
-        </ul>
       </div>
       <h2>Key Characteristics of O(1)</h2>
       <div className="infoText">
@@ -75,100 +62,114 @@ const Constant = () => {
           <li>
             <span>Fixed Time:</span>
             <p>
-              The running time of the algorithm does not depend on the size of
-              the input. For example, accessing an element from an array or hash
-              table is typically O(1).
+              O(1) operations always take a constant amount of time. The time
+              taken to complete the operation is independent of the input size.
+              For example, accessing an element in an array by index is always a
+              fixed time operation.
             </p>
           </li>
           <li>
-            <span>No Dependency on Input Size:</span>
+            <span>No Scaling with Input Size:</span>
             <p>
-              O(1) operations are independent of the size of the input. Unlike
-              O(n) or O(log n) algorithms, they do not scale or degrade in
-              performance as the input grows.
+              As the input size increases, the time it takes to complete the
+              operation remains unchanged. This means that regardless of whether
+              you're dealing with a small or large dataset, the performance
+              stays the same.
+            </p>
+          </li>
+          <li>
+            <span>Efficiency:</span>
+            <p>
+              Since the time complexity does not increase with the size of the
+              input, O(1) operations are generally very fast and scalable. This
+              makes them ideal in scenarios where consistent performance is
+              needed.
             </p>
           </li>
           <li>
             <span>Simple Operations:</span>
             <p>
-              These algorithms often involve simple operations like direct
-              memory access, basic arithmetic, or boolean evaluations.{" "}
-            </p>
-          </li>
-          <li>
-            <span>No Loops or Recursion:</span>
-            <p>
-              Algorithms that have O(1) complexity generally do not have loops
-              or recursion that would iterate over the input data.
+              O(1) operations usually involve simple tasks, such as directly
+              accessing data, performing a calculation, or checking a condition.
+              These operations don’t require iterating through large datasets.
             </p>
           </li>
         </ul>
       </div>
       <h2>Code Example</h2>
       <div className="infoText">
-        <p>
-          The <span>getElement</span> function takes an array (arr) and an index
-          (index) as inputs. It directly retrieves the value stored at the
-          specified index in the array. In this example, it fetches the value at
-          index 2, which is 30.
-        </p>
+        <div className="codeHighlight">
+          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <h3>Choose a Language</h3>
+
+          {/* Desktop: Buttons */}
+          <div className="langBtn">
+            <button onClick={() => setLanguage("javascript")}>
+              JavaScript
+            </button>
+            <button onClick={() => setLanguage("c")}>C</button>
+            <button onClick={() => setLanguage("cpp")}>C++</button>
+            <button onClick={() => setLanguage("java")}>Java</button>
+            <button onClick={() => setLanguage("python")}>Python</button>
+          </div>
+
+          {/* Mobile: Dropdown */}
+          <div className="langDropdown">
+            <select
+              onChange={e =>
+                setLanguage(e.target.value as keyof ConstantExamples)
+              }
+              value={language}
+              aria-label="Choose a programming language">
+              <option value="javascript">JavaScript</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+            </select>
+          </div>
+
+          <pre>
+            <code ref={codeRef} className={`language-${language}`}>
+              {codeContent}
+            </code>
+          </pre>
+        </div>
       </div>
-      <h3>Choose a Language</h3>
 
-      {/* Desktop: Buttons */}
-      <div className="langBtn">
-        <button onClick={() => setLanguage("javascript")}>JavaScript</button>
-        <button onClick={() => setLanguage("c")}>C</button>
-        <button onClick={() => setLanguage("cpp")}>C++</button>
-        <button onClick={() => setLanguage("java")}>Java</button>
-        <button onClick={() => setLanguage("python")}>Python</button>
-      </div>
-
-      {/* Mobile: Dropdown */}
-      <div className="langDropdown">
-        <select
-          onChange={e => setLanguage(e.target.value as keyof ConstantExamples)}
-          value={language}
-          aria-label="Choose a programming language">
-          <option value="javascript">JavaScript</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-        </select>
-      </div>
-
-      <pre>
-        <code ref={codeRef} className={`language-${language}`}>
-          {codeContent}
-        </code>
-      </pre>
-
-      <h2>Why is O(1) So Efficient?</h2>
+      <h2>Use Cases of O(1)</h2>
       <div className="infoText">
         <ul>
           <li>
-            <span>Predictable:</span>
+            <span>Array Indexing:</span>
             <p>
-              Since the operation takes the same amount of time regardless of
-              the input size, it's highly predictable and efficient, especially
-              when dealing with large datasets.
+              Accessing an element in an array by its index is an O(1)
+              operation. The time it takes to retrieve an element doesn’t depend
+              on the size of the array.
             </p>
           </li>
           <li>
-            <span>Scalable:</span>
+            <span>Hash Tables:</span>
             <p>
-              When an algorithm has O(1) time complexity, it scales well, even
-              with a massive amount of data. The performance remains constant
-              and does not degrade as the size of the input increases.
+              In hash tables, retrieving a value by its key is an O(1)
+              operation. The time it takes to look up a value remains constant,
+              even as the table grows in size.
             </p>
           </li>
           <li>
-            <span>Fast Execution:</span>
+            <span>Simple Arithmetic Operations:</span>
             <p>
-              Operations with O(1) time complexity can often be completed very
-              quickly because they don't need to iterate through data or perform
-              recursive calls.
+              Basic arithmetic operations like addition, subtraction,
+              multiplication, or division are generally O(1), as they take the
+              same amount of time regardless of the values involved.
+            </p>
+          </li>
+          <li>
+            <span>Boolean Checks:</span>
+            <p>
+              Checking if a number is even or odd using the modulus operator is
+              an O(1) operation. The size of the number doesn’t affect how long
+              it takes to perform this check.
             </p>
           </li>
         </ul>
