@@ -19,6 +19,17 @@ const NavButtons = () => {
     "/factorial",
   ];
 
+  const routeTitles = [
+    "Introduction",
+    "Constant Time",
+    "Linear Time",
+    "Quadratic Time",
+    "Logarithmic Time",
+    "Linearithmic Time",
+    "Exponential Time",
+    "Factorial Time",
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(
     routes.indexOf(location.pathname)
   );
@@ -40,14 +51,15 @@ const NavButtons = () => {
       <button
         onClick={() => handleNavigation("prev")}
         disabled={currentIndex === 0}
-        className="navButton"
+        className="backButton"
         aria-label="Previous Page">
         <ArrowBackIosRoundedIcon />
       </button>
+      <h1>{routeTitles[currentIndex]}</h1>
       <button
         onClick={() => handleNavigation("next")}
         disabled={currentIndex === routes.length - 1}
-        className="navButton"
+        className="nextButton"
         aria-label="Next Page">
         <ArrowForwardIosRoundedIcon />
       </button>
