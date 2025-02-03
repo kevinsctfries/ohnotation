@@ -121,9 +121,6 @@ const Sidebar = ({
             </li>
           </ul>
         </nav>
-        <span>Made by: kevinsctfries</span>
-        <br />
-        <span>CURRENTLY UNDER DEVELOPMENT!</span>
       </div>
     </div>
   );
