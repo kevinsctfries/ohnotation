@@ -40,7 +40,11 @@
 
 @media (max-width: 768px) {
   .navButtons {
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 2rem;
+  }
+
+  .navButtons .backButton {
+    margin-left: 4rem;
   }
 }

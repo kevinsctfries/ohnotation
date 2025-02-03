@@ -50,6 +50,7 @@ const NavButtons = () => {
     <div className="navButtons">
       <button
         onClick={() => handleNavigation("prev")}
+        disabled={currentIndex === 0}
         className="backButton"
         aria-label="Previous Page">
         <ArrowBackIosRoundedIcon />
@@ -57,6 +58,7 @@ const NavButtons = () => {
       <h1>{routeTitles[currentIndex]}</h1>
       <button
         onClick={() => handleNavigation("next")}
+        disabled={currentIndex === routes.length - 1}
         className="nextButton"
         aria-label="Next Page">
         <ArrowForwardIosRoundedIcon />
