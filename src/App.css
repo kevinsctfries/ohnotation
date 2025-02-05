@@ -171,6 +171,12 @@ code {
     border: none;
   }
 
+  h2 {
+    margin: 1rem 0 0 0;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+
   .infoText {
     padding: 0;
   }
