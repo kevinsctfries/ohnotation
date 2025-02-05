@@ -13,6 +13,9 @@
   flex-direction: column;
   margin-top: 4rem;
   padding: 1rem;
+  background-color: var(--clr-surface-a20);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 /* Typography */
@@ -47,12 +50,7 @@ code {
   font-size: 1rem;
   padding: 1.5rem;
   margin: auto;
-  background-color: var(--clr-surface-a10);
   border-radius: 8px;
-}
-
-.infoText:nth-of-type(odd) {
-  background-color: var(--clr-surface-a20);
 }
 
 .infoText h3 {
@@ -139,32 +137,6 @@ code {
     overflow-x: hidden;
   }
 
-  .langBtn button {
-    width: 20%;
-    font-size: 1rem;
-  }
-
-  [class^="language-"] {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    width: 90vw;
-    font-size: 1.125rem;
-  }
-  .infoText p {
-    font-size: 1.125rem;
-  }
-  .tempImg {
-    min-width: 75vw;
-  }
-
-  [class^="language-"] {
-    font-size: 0.75rem;
-  }
-
   .langBtn {
     display: none;
   }
@@ -184,5 +156,34 @@ code {
     color: var(--clr-light-a0);
     cursor: pointer;
     border: none;
+  }
+
+  [class^="language-"] {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 90vw;
+    font-size: 1.125rem;
+    padding: 0;
+    border: none;
+  }
+
+  .infoText {
+    padding: 0;
+  }
+  .infoText p {
+    font-size: 1.125rem;
+  }
+  .tempImg {
+    min-width: 75vw;
+  }
+
+  [class^="language-"] {
+    font-size: 0.75rem;
+    width: 100%;
+    padding: 0;
   }
 }

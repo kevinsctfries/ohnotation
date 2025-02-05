@@ -7,7 +7,6 @@
 /* Button Styles */
 .navButtons button {
   padding: 10px;
-  font-size: 2rem;
   background-color: var(--clr-primary-a20);
   border-radius: 5px;
   border: 0;
@@ -34,17 +33,34 @@
 
 @media (max-width: 1200px) {
   .navButtons {
-    padding-top: 4rem;
+    margin-top: 4rem;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 768px) {
+  .navButtons h1 {
+    font-size: 1rem;
+  }
   .navButtons {
+    display: flex;
     justify-content: space-between;
     gap: 2rem;
+    align-items: center; /* Prevents buttons from stretching */
+  }
+
+  .navButtons button {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navButtons button svg {
+    font-size: 1rem;
   }
 
   .navButtons .backButton {
-    margin-left: 4rem;
+    margin-left: 4rem; /* Push it away by exactly 4rem */
+    flex-shrink: 0; /* Prevents it from resizing weirdly */
   }
 }
