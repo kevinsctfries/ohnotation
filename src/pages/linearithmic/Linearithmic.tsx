@@ -98,7 +98,17 @@ const Linearithmic = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates the Merge Sort algorithm, which efficiently
+            sorts an array using a divide-and-conquer approach. The function
+            recursively splits the array into halves until single-element arrays
+            are reached, then merges them back together in sorted order. At each
+            level of recursion, merging requires iterating through the elements
+            to combine them in order. Sorting an array using Merge Sort is an
+            O(n log n) operation, as the array is repeatedly divided in half
+            (O(log n) levels of recursion), and merging takes O(n) time per
+            level.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

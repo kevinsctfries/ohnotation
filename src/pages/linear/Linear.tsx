@@ -100,7 +100,13 @@ const Linear = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates how to find the maximum value in an array by
+            iterating through each element. Each function assumes the first
+            element is the maximum and updates it whenever a larger value is
+            found. Finding the maximum value in an array using this approach is
+            an O(n) operation.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

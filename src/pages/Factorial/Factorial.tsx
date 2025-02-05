@@ -108,7 +108,12 @@ const Factorial = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates how to generate all permutations of an array
+            using a recursive approach. Each function takes an array as input
+            and systematically rearranges its elements to produce every possible
+            ordering. Generating permutations in this way is an O(n!) operation.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

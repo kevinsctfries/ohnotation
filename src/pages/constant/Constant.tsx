@@ -99,7 +99,16 @@ const Constant = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates constant time complexity O(1), where the time
+            it takes to execute the operation does not depend on the size of the
+            input. In this example, the function <code>getElement</code>{" "}
+            retrieves an element from an array at a specified index. Since
+            accessing an element at a given index in an array is a direct
+            lookup, the operation is always completed in the same amount of
+            time, regardless of the array's size. This makes it an O(1)
+            operation.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

@@ -94,7 +94,16 @@ const Logarithmic = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates logarithmic time complexity O(log n) by
+            implementing Binary Search, an efficient algorithm for finding an
+            element in a sorted array. The algorithm repeatedly divides the
+            search space in half, reducing the problem size exponentially. Each
+            iteration eliminates half of the remaining elements, leading to a
+            logarithmic growth rate. Finding an element using Binary Search is
+            an O(log n) operation, making it significantly faster than linear
+            search for large datasets.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

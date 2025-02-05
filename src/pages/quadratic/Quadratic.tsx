@@ -103,7 +103,16 @@ const Quadratic = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates quadratic time complexity O(n²) using Bubble
+            Sort, a simple sorting algorithm. The algorithm repeatedly compares
+            adjacent elements and swaps them if they are in the wrong order. The
+            process is repeated for every element, leading to n-1 passes, where
+            each pass requires up to n-1 comparisons. As a result, the number of
+            operations grows proportionally to the square of the input size,
+            making Bubble Sort inefficient for large datasets. Sorting an array
+            using this approach is an O(n²) operation.
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}

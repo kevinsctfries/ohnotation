@@ -101,7 +101,13 @@ const Exponential = () => {
       <h2>Code Example</h2>
       <div className="infoText">
         <div className="codeHighlight">
-          <p>CODE EXAMPLE CODE EXAMPLE CODE EXAMPLE</p>
+          <p>
+            This code demonstrates how to compute the Fibonacci sequence using a
+            recursive approach. Each function takes an integer n as input and
+            returns the nth Fibonacci number by recursively summing the two
+            preceding numbers. Computing Fibonacci numbers with this recursive
+            approach is an O(2ⁿ) operation
+          </p>
           <h3>Choose a Language</h3>
 
           {/* Desktop: Buttons */}
