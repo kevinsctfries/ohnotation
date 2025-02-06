@@ -88,6 +88,7 @@ const Linear = () => {
 
   return (
     <div>
+      <h1>Linear Time</h1>
       <h2>Understanding O(n)</h2>
       <p>
         O(n), or linear time, refers to an operation where the time it takes to
@@ -176,7 +177,16 @@ const Linear = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(n) is!</h3>
+      <h2>Test O(n)</h2>
+      <p>
+        Experiment with the <code>findMax</code> function by editing and running
+        the code below to observe its performance in action.
+      </p>
+      <p>
+        Try modifying the elements inside the <code>numbers</code> array and
+        observe how the function finds the maximum value.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -199,7 +209,6 @@ const Linear = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(n)</h2>
       <ul>
         <li>

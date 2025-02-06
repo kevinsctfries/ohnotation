@@ -5,9 +5,7 @@ const Header = () => {
   return (
     <header>
       <Link to="/" className="headerLink">
-        <h1 className="title">
-          oh, no<span className="subTitle">tation</span>
-        </h1>
+        <h1 className="title">oh, notation </h1>
       </Link>
     </header>
   );

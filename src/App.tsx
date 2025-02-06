@@ -10,7 +10,6 @@ import Quadratic from "./pages/quadratic/Quadratic";
 import Linearithmic from "./pages/linearithmic/Linearithmic";
 import Exponential from "./pages/Exponential/Exponential";
 import Factorial from "./pages/Factorial/Factorial";
-import NavButtons from "./components/NavButtons/NavButtons";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
@@ -28,7 +27,6 @@ function App() {
           <Sidebar isActive={isSidebarActive} toggleSidebar={toggleSidebar} />
           <div className="content">
             <Header />
-            <NavButtons />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/constant" element={<Constant />} />

@@ -37,7 +37,7 @@ const Sidebar = ({
   }, [isActive, toggleSidebar]);
 
   return (
-    <div className="app">
+    <div className="sidebar-container">
       <div
         ref={tabRef}
         className={`sidebar-tab ${isActive ? "active" : ""}`}
@@ -49,7 +49,7 @@ const Sidebar = ({
         )}
       </div>
       <div ref={sidebarRef} className={`sidebar ${isActive ? "active" : ""}`}>
-        <h2 className="sidebarTitle">Navigation</h2>
+        <span>Navigation</span>
         <nav>
           <ul>
             <li>
@@ -83,7 +83,7 @@ const Sidebar = ({
               <NavLink
                 to="/quadratic"
                 className={({ isActive }) => (isActive ? "active" : "")}>
-                O(n^2)
+                O(n²)
                 <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>
@@ -107,7 +107,7 @@ const Sidebar = ({
               <NavLink
                 to="/exponential"
                 className={({ isActive }) => (isActive ? "active" : "")}>
-                O(2^n)
+                O(2ⁿ)
                 <ChevronRightRoundedIcon className="icon" />
               </NavLink>
             </li>

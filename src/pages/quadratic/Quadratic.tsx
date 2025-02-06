@@ -89,6 +89,7 @@ const Quadratic = () => {
 
   return (
     <div>
+      <h1>Quadratic Time</h1>
       <h2>What is O(n²)?</h2>
       <p>
         O(n²), or quadratic time, refers to an operation where the time it takes
@@ -184,7 +185,16 @@ const Quadratic = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(n²)</h2>
+      <p>
+        Experiment with the <code>bubbleSort</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+      <p>
+        Try modifying the elements inside the <code>numbers</code> array and
+        observe how the function sorts different sets of numbers.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -207,7 +217,6 @@ const Quadratic = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(n²)</h2>
       <ul>
         <li>

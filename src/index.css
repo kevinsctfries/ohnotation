@@ -3,15 +3,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
 
-body {
-  font-family: "Arial", sans-serif;
-  background-color: var(--clr-surface-a0);
-  color: var(--clr-light-a0);
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg);
 }
 
 :root {
+  --font-fallback: BlinkMacSystemFont, "Noto Sans", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", sans-serif;
+  --font-body: Inter, var(--font-fallback);
+  --font-heading: Inter, var(--font-fallback);
+  --font-code: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+
+  --base-font-size: 100%;
+  --base-line-height: 1.2;
+  --intermediate-line-height: 1.5;
+  --heading-line-height: var(--base-line-height);
+  --heading-letter-spacing: -0.031rem;
+  --font-content-line-height: 1.75;
+  --font-body-strong-weight: 600;
+  --type-heading-h1-font-size: 2.488rem;
+  --type-heading-h2-font-size: 2.074rem;
+  --type-heading-h3-font-size: 1.728rem;
+  --type-heading-h4-font-size: 1.44rem;
+  --type-heading-h5-font-size: 1.2rem;
+  --type-article-p: var(--font-body);
+
+  --type-heading-h1-font-size-mobile: 1.802rem;
+  --type-heading-h2-font-size-mobile: 1.602rem;
+  --type-heading-h3-font-size-mobile: 1.424rem;
+  --type-heading-h4-font-size-mobile: 1.266rem;
+
+  --scrollbar-bg: #0000;
+  --scrollbar-color: #ffffff40;
+
   --clr-dark-a0: #000000;
   --clr-light-a0: #ffffff;
 

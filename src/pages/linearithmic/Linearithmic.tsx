@@ -89,6 +89,7 @@ const Linearithmic = () => {
 
   return (
     <div>
+      <h1>Linearithmic Time</h1>
       <h2>Understanding O(n log n)</h2>
       <p>
         O(n log n), or linearithmic time, describes an algorithm whose time
@@ -178,7 +179,16 @@ const Linearithmic = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(n log n) is!</h3>
+      <h2>Test O(n log n)</h2>
+      <p>
+        Experiment with the <code>mergeSort</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+      <p>
+        Try modifying the elements inside the <code>arr</code> array and observe
+        how the function sorts different sets of numbers.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -201,7 +211,6 @@ const Linearithmic = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(n log n)</h2>
       <ul>
         <li>

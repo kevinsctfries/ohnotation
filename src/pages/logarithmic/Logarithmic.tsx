@@ -89,6 +89,7 @@ const Logarithmic = () => {
 
   return (
     <div>
+      <h1>Logarithmic Time</h1>
       <h2>What is O(log n)?</h2>
       <p>
         O(log n), or logarithmic time, refers to an algorithm where the time it
@@ -174,7 +175,16 @@ const Logarithmic = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(log n)</h2>
+      <p>
+        Experiment with the <code>binarySearch</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+      <p>
+        Try modifying the elements inside the <code>sortedArray</code> array and
+        observe how the function sorts different sets of numbers.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -197,7 +207,6 @@ const Logarithmic = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(log n)</h2>
       <ul>
         <li>

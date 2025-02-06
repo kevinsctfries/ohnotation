@@ -90,6 +90,7 @@ const Constant = () => {
 
   return (
     <div>
+      <h1>Constant Time</h1>
       <h2>Understanding O(1)</h2>
       <p>
         O(1), or constant time, refers to an operation in which the time it
@@ -172,7 +173,17 @@ const Constant = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(1)</h2>
+      <p>
+        Experiment with the <code>getElement</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+      <p>
+        Try changing the index inside{" "}
+        <code>console.log(getElement(myArray, index))</code> to access a
+        different element in the array and see how the output changes.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">

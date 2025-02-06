@@ -1,45 +1,69 @@
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-surface-a0);
+  color: var(--clr-light-a0);
+}
+
 .app {
   display: flex;
-  min-height: 100vh;
-  position: relative;
-  margin: 0 auto;
-  max-width: 75%;
+  flex-direction: row;
+  box-sizing: border-box;
 }
 
 .content {
-  flex: 1;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
-  padding: 1rem;
-  background-color: var(--clr-surface-a20);
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 1px solid var(--clr-surface-a30);
+  border-right: 1px solid var(--clr-surface-a30);
+  padding: 2rem;
   line-height: 1.5rem;
+  width: 60%;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--type-heading-h1-font-size);
+  font-weight: 600;
 }
 
 h2 {
-  margin: 2rem 1rem 0.5rem 1rem;
-  border-bottom: 1px solid var(--clr-light-a0);
+  font-size: var(--type-heading-h2-font-size);
+  font-weight: 400;
 }
 
 h3 {
+  font-size: var(--type-heading-h3-font-size);
+  font-weight: 300;
   text-align: right;
-  margin: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 2rem 0 1rem;
+  font-family: var(--font-heading);
+  letter-spacing: var(--heading-letter-spacing);
 }
 
 p {
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
+  font-weight: 400;
+  line-height: var(--font-content-line-height);
+  font-family: var(--type-article-p-font);
+  font-size: 1rem;
 }
 
 span {
   font-weight: bold;
   color: var(--clr-light-a0);
+}
+
+code {
+  background: var(--clr-surface-a10);
+  font-family: var(--font-code);
+  padding: 0.25rem;
+  border-radius: 5px;
 }
 
 .langDropdown {
@@ -111,7 +135,7 @@ span {
 }
 
 .console {
-  background-color: var(--clr-surface-a0);
+  background-color: var(--clr-surface-a10);
   color: var(--clr-light-a0);
   padding: 1rem;
   margin: 0;
@@ -133,7 +157,7 @@ span {
 }
 
 .consoleOutput {
-  background-color: var(--clr-surface-a10);
+  background-color: var(--clr-surface-a20);
   padding: 1rem;
   border-radius: 5px;
   overflow-y: auto;
@@ -150,13 +174,15 @@ span {
 
 @media (max-width: 1200px) {
   .app {
-    max-width: 100%;
+    display: flex;
+    margin: 0;
   }
 
   .content {
-    margin: 0;
-    padding: 1rem;
     flex-grow: 1;
+    margin-left: 250px;
+    padding-top: 5rem;
+    border-right: none;
   }
 
   .langBtn {
@@ -188,15 +214,25 @@ span {
 @media (max-width: 768px) {
   .content {
     width: 90vw;
-    font-size: 1.125rem;
-    padding: 0;
     border: none;
+    margin: 0;
+  }
+
+  h1,
+  h2 {
+    text-align: right;
+  }
+
+  h1 {
+    font-size: var(--type-heading-h1-font-size-mobile);
   }
 
   h2 {
-    margin: 1rem 0;
-    text-align: right;
-    font-size: 1.5rem;
+    font-size: var(--type-heading-h2-font-size-mobile);
+  }
+
+  h3 {
+    font-size: var(--type-heading-h3-font-size-mobile);
   }
 
   .tempImg {
@@ -204,8 +240,6 @@ span {
   }
 
   [class^="language-"] {
-    font-size: 0.75rem;
-    width: 100%;
-    padding: 0;
+    font-size: var(--base-font-size);
   }
 }

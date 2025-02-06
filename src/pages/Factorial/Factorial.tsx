@@ -91,6 +91,7 @@ const Factorial = () => {
 
   return (
     <div>
+      <h1>Factorial Time</h1>
       <h2>Understanding O(n!)</h2>
       <p>
         O(n!) represents factorial time complexity, which describes an algorithm
@@ -105,7 +106,6 @@ const Factorial = () => {
         This is much more drastic than exponential time complexity (O(2ⁿ)), as
         factorial growth is far faster than exponential growth.
       </p>
-
       <h2>Key Characteristics of O(n!)</h2>
       <ul>
         <li>
@@ -186,7 +186,16 @@ const Factorial = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(n!) is!</h3>
+      <h2>Test O(n!)</h2>
+      <p>
+        Experiment with the <code>generatePermutations</code> function by
+        editing and running the code below to observe its performance in action.
+      </p>
+      <p>
+        Try modifying the elements inside the <code>nums</code> array and
+        observe how the function generates different permutations.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -209,7 +218,6 @@ const Factorial = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(n!)</h2>
       <ul>
         <li>

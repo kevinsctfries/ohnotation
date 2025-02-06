@@ -90,6 +90,7 @@ const Exponential = () => {
 
   return (
     <div>
+      <h1>Exponential Time</h1>
       <h2>Understanding O(2ⁿ)</h2>
       <p>
         O(2ⁿ) describes an exponential time complexity, meaning that the time it
@@ -178,7 +179,17 @@ const Exponential = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(2ⁿ) is!</h3>
+      <h2>Test O(2ⁿ)</h2>
+      <p>
+        Experiment with the <code>fibonacci</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+      <p>
+        "Try changing the value of <code>n</code> inside{" "}
+        <code>console.log(fibonacci(n))</code> to see how the function computes
+        different Fibonacci numbers."
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
