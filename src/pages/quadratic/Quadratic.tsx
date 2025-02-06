@@ -183,8 +183,11 @@ const Quadratic = () => {
           <code ref={codeRef} className={`language-${language}`} />
         </pre>
       </div>
-
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(n²)</h2>
+      <p>
+        Experiment with the <code>bubbleSort</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>{" "}
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -207,7 +210,6 @@ const Quadratic = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(n²)</h2>
       <ul>
         <li>

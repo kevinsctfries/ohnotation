@@ -172,7 +172,12 @@ const Constant = () => {
         </pre>
       </div>
 
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(1)</h2>
+      <p>
+        Experiment with the <code>getElement</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">

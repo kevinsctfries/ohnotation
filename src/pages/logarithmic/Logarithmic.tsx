@@ -173,8 +173,11 @@ const Logarithmic = () => {
           <code ref={codeRef} className={`language-${language}`} />
         </pre>
       </div>
-
-      <h3>Test how fast O(1) is!</h3>
+      <h2>Test O(log n)</h2>
+      <p>
+        Experiment with the <code>binarySearch</code> function by editing and
+        running the code below to observe its performance in action.
+      </p>{" "}
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">
@@ -197,7 +200,6 @@ const Logarithmic = () => {
           </div>
         </div>
       </div>
-
       <h2>Use Cases of O(log n)</h2>
       <ul>
         <li>
