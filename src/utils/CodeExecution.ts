@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useCodeExecution = (codeContent: string) => {
+export const useCodeExecution = () => {
   const [consoleOutput, setConsoleOutput] = useState<string | null>(null);
   const [executionTime, setExecutionTime] = useState<number | null>(null);
 

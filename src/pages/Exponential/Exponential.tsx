@@ -45,8 +45,8 @@ const Exponential = () => {
     exponentialExamples.javascript
   );
 
-  const { consoleOutput, executionTime, executeCode } =
-    useCodeExecution(editableCode);
+  // Use code execution hook without passing codeContent
+  const { consoleOutput, executionTime, executeCode } = useCodeExecution();
 
   const codeRef = useRef<HTMLElement | null>(null);
   const editorRef = useRef<HTMLDivElement | null>(null);

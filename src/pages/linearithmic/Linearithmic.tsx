@@ -35,16 +35,18 @@ const Linearithmic = () => {
   const [language, setLanguage] =
     useState<keyof LinearithmicExamples>("javascript");
 
+  // Static, non-editable code for Highlight.js
   const [codeContent, setCodeContent] = useState<string>(
     linearithmicExamples.javascript
   );
 
+  // Editable code for CodeMirror only
   const [editableCode, setEditableCode] = useState<string>(
     linearithmicExamples.javascript
   );
 
-  const { consoleOutput, executionTime, executeCode } =
-    useCodeExecution(editableCode);
+  // Use code execution hook without passing codeContent
+  const { consoleOutput, executionTime, executeCode } = useCodeExecution();
 
   const codeRef = useRef<HTMLElement | null>(null);
   const editorRef = useRef<HTMLDivElement | null>(null);

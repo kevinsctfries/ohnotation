@@ -35,16 +35,18 @@ const Quadratic = () => {
   const [language, setLanguage] =
     useState<keyof QuadraticExamples>("javascript");
 
+  // Static, non-editable code for Highlight.js
   const [codeContent, setCodeContent] = useState<string>(
     quadraticExamples.javascript
   );
 
+  // Editable code for CodeMirror only
   const [editableCode, setEditableCode] = useState<string>(
     quadraticExamples.javascript
   );
 
-  const { consoleOutput, executionTime, executeCode } =
-    useCodeExecution(editableCode);
+  // Use code execution hook without passing codeContent
+  const { consoleOutput, executionTime, executeCode } = useCodeExecution();
 
   const codeRef = useRef<HTMLElement | null>(null);
   const editorRef = useRef<HTMLDivElement | null>(null);

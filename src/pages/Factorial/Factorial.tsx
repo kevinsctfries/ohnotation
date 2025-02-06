@@ -36,6 +36,7 @@ const Factorial = () => {
     useState<keyof FactorialExamples>("javascript");
 
   // Static, non-editable code for Highlight.js
+  // Static, non-editable code for Highlight.js
   const [codeContent, setCodeContent] = useState<string>(
     factorialExamples.javascript
   );
@@ -45,8 +46,8 @@ const Factorial = () => {
     factorialExamples.javascript
   );
 
-  const { consoleOutput, executionTime, executeCode } =
-    useCodeExecution(editableCode);
+  // Use code execution hook without passing codeContent
+  const { consoleOutput, executionTime, executeCode } = useCodeExecution();
 
   const codeRef = useRef<HTMLElement | null>(null);
   const editorRef = useRef<HTMLDivElement | null>(null);
