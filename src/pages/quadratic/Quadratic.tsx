@@ -183,11 +183,17 @@ const Quadratic = () => {
           <code ref={codeRef} className={`language-${language}`} />
         </pre>
       </div>
+
       <h2>Test O(n²)</h2>
       <p>
         Experiment with the <code>bubbleSort</code> function by editing and
         running the code below to observe its performance in action.
-      </p>{" "}
+      </p>
+      <p>
+        Try modifying the elements inside the <code>numbers</code> array and
+        observe how the function sorts different sets of numbers.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">

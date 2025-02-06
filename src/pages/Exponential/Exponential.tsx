@@ -183,6 +183,12 @@ const Exponential = () => {
         Experiment with the <code>fibonacci</code> function by editing and
         running the code below to observe its performance in action.
       </p>
+      <p>
+        "Try changing the value of <code>n</code> inside{" "}
+        <code>console.log(fibonacci(n))</code> to see how the function computes
+        different Fibonacci numbers."
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">

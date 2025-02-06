@@ -177,6 +177,11 @@ const Constant = () => {
         Experiment with the <code>getElement</code> function by editing and
         running the code below to observe its performance in action.
       </p>
+      <p>
+        Try changing the index inside{" "}
+        <code>console.log(getElement(myArray, index))</code> to access a
+        different element in the array and see how the output changes.
+      </p>
 
       <div className="code-editor">
         <div ref={editorRef} />

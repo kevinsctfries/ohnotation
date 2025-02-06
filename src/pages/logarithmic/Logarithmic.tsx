@@ -173,11 +173,17 @@ const Logarithmic = () => {
           <code ref={codeRef} className={`language-${language}`} />
         </pre>
       </div>
+
       <h2>Test O(log n)</h2>
       <p>
         Experiment with the <code>binarySearch</code> function by editing and
         running the code below to observe its performance in action.
-      </p>{" "}
+      </p>
+      <p>
+        Try modifying the elements inside the <code>sortedArray</code> array and
+        observe how the function sorts different sets of numbers.
+      </p>
+
       <div className="code-editor">
         <div ref={editorRef} />
         <div className="console">

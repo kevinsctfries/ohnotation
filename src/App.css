@@ -34,12 +34,18 @@ h3 {
 }
 
 p {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 span {
   font-weight: bold;
   color: var(--clr-light-a0);
+}
+
+code {
+  background: var(--clr-surface-a10);
+  padding: 0.25rem;
+  border-radius: 5px;
 }
 
 .langDropdown {
