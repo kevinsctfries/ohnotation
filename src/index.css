@@ -5,13 +5,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  background-color: var(--clr-surface-a0);
-  color: var(--clr-light-a0);
-}
-
 :root {
+  --font-fallback: BlinkMacSystemFont, "Noto Sans", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", sans-serif;
+  --font-body: Inter, var(--font-fallback);
+  --font-heading: Inter, var(--font-fallback);
+  --font-code: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+
   --clr-dark-a0: #000000;
   --clr-light-a0: #ffffff;
 
