@@ -88,6 +88,7 @@ const Linear = () => {
 
   return (
     <div>
+      <h1>Linear Time</h1>
       <h2>Understanding O(n)</h2>
       <p>
         O(n), or linear time, refers to an operation where the time it takes to

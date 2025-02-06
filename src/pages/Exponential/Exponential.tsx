@@ -90,6 +90,7 @@ const Exponential = () => {
 
   return (
     <div>
+      <h1>Exponential Time</h1>
       <h2>Understanding O(2ⁿ)</h2>
       <p>
         O(2ⁿ) describes an exponential time complexity, meaning that the time it

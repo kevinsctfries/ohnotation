@@ -89,6 +89,7 @@ const Quadratic = () => {
 
   return (
     <div>
+      <h1>Quadratic Time</h1>
       <h2>What is O(n²)?</h2>
       <p>
         O(n²), or quadratic time, refers to an operation where the time it takes

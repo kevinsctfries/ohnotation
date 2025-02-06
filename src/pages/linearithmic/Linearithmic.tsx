@@ -89,6 +89,7 @@ const Linearithmic = () => {
 
   return (
     <div>
+      <h1>Linearithmic Time</h1>
       <h2>Understanding O(n log n)</h2>
       <p>
         O(n log n), or linearithmic time, describes an algorithm whose time

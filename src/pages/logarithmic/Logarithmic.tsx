@@ -89,6 +89,7 @@ const Logarithmic = () => {
 
   return (
     <div>
+      <h1>Logarithmic Time</h1>
       <h2>What is O(log n)?</h2>
       <p>
         O(log n), or logarithmic time, refers to an algorithm where the time it

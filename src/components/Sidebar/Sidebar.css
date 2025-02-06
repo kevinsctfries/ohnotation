@@ -4,6 +4,7 @@
   top: 0;
   height: 100vh;
   width: 250px;
+  color: var(--clr-light-a0);
   display: flex;
   padding-left: 2rem;
   flex-direction: column;
@@ -12,21 +13,9 @@
   z-index: 10;
 }
 
-.sidebar::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 4rem;
-  height: 65vh;
-}
-
 /* Sidebar Tab */
 .sidebar-tab {
   display: none;
-}
-
-.sidebar-tab svg {
-  pointer-events: none;
 }
 
 /* Sidebar Title */
@@ -49,7 +38,7 @@
 .sidebar nav ul li a {
   color: var(--clr-light-a0);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 1rem;
   position: relative;
 }
@@ -74,6 +63,7 @@
 
 .sidebar nav ul li a.active .icon {
   visibility: visible;
+  color: var(--clr-primary-a0);
 }
 
 /* Media Queries */

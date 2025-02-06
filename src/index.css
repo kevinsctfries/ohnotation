@@ -27,6 +27,12 @@
   --type-heading-h3-font-size: 1.728rem;
   --type-heading-h4-font-size: 1.44rem;
   --type-heading-h5-font-size: 1.2rem;
+  --type-article-p: var(--font-body);
+
+  --type-heading-h1-font-size-mobile: 1.802rem;
+  --type-heading-h2-font-size-mobile: 1.602rem;
+  --type-heading-h3-font-size-mobile: 1.424rem;
+  --type-heading-h4-font-size-mobile: 1.266rem;
 
   --scrollbar-bg: #0000;
   --scrollbar-color: #ffffff40;

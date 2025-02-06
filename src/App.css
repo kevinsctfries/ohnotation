@@ -16,7 +16,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 2rem;
   border-left: 1px solid var(--clr-surface-a30);
   border-right: 1px solid var(--clr-surface-a30);
   padding: 2rem;
@@ -48,7 +48,10 @@ h3 {
 
 p {
   padding: 1rem 0 2rem;
-  line-height: 1.75rem;
+  font-weight: 400;
+  line-height: var(--font-content-line-height);
+  font-family: var(--type-article-p-font);
+  font-size: 1rem;
 }
 
 span {
@@ -175,7 +178,6 @@ code {
   }
 
   .content {
-    margin: 0;
     flex-grow: 1;
     border-right: none;
   }
@@ -210,12 +212,25 @@ code {
   .content {
     width: 90vw;
     font-size: 1.125rem;
-    padding: 0 2rem;
     border: none;
   }
 
-  h2 {
+  h1,
+  h2,
+  h3 {
     text-align: right;
+  }
+
+  h1 {
+    font-size: var(--type-heading-h1-font-size-mobile);
+  }
+
+  h2 {
+    font-size: var(--type-heading-h2-font-size-mobile);
+  }
+
+  h3 {
+    font-size: var(--type-heading-h3-font-size-mobile);
   }
 
   .tempImg {
@@ -223,8 +238,6 @@ code {
   }
 
   [class^="language-"] {
-    font-size: 0.75rem;
-    width: 100%;
-    padding: 0;
+    font-size: var(--base-font-size);
   }
 }

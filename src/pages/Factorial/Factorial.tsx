@@ -91,6 +91,7 @@ const Factorial = () => {
 
   return (
     <div>
+      <h1>Factorial Time</h1>
       <h2>Understanding O(n!)</h2>
       <p>
         O(n!) represents factorial time complexity, which describes an algorithm

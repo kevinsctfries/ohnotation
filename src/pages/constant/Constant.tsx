@@ -90,6 +90,7 @@ const Constant = () => {
 
   return (
     <div>
+      <h1>Constant Time</h1>
       <h2>Understanding O(1)</h2>
       <p>
         O(1), or constant time, refers to an operation in which the time it
