@@ -17,10 +17,25 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid var(--clr-surface-a30);
+  border-right: 1px solid var(--clr-surface-a30);
   padding: 2rem;
   line-height: 1.5rem;
+}
+
+h1 {
+  font-size: var(--type-heading-h1-font-size);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--type-heading-h2-font-size);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: var(--type-heading-h3-font-size);
+  font-weight: 300;
 }
 
 h1,
@@ -28,6 +43,7 @@ h2,
 h3 {
   margin: 2rem 0 1rem;
   font-family: var(--font-heading);
+  letter-spacing: var(--heading-letter-spacing);
 }
 
 p {
@@ -116,7 +132,7 @@ code {
 }
 
 .console {
-  background-color: var(--clr-surface-a0);
+  background-color: var(--clr-surface-a10);
   color: var(--clr-light-a0);
   padding: 1rem;
   margin: 0;
@@ -138,7 +154,7 @@ code {
 }
 
 .consoleOutput {
-  background-color: var(--clr-surface-a10);
+  background-color: var(--clr-surface-a20);
   padding: 1rem;
   border-radius: 5px;
   overflow-y: auto;
@@ -161,6 +177,7 @@ code {
   .content {
     margin: 0;
     flex-grow: 1;
+    border-right: none;
   }
 
   .langBtn {
@@ -198,9 +215,7 @@ code {
   }
 
   h2 {
-    margin: 1rem 0;
     text-align: right;
-    font-size: 1.5rem;
   }
 
   .tempImg {
