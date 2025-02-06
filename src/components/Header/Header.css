@@ -9,22 +9,16 @@ header {
   left: 0;
   z-index: 9999;
   width: 100vw;
-  padding: 0 2rem;
   align-items: center;
   height: 4rem;
 }
 
 /* Header Content */
 .title {
+  font-family: var(--font-code);
+  padding: 0 1rem;
   margin: 0;
   font-size: 2rem;
-}
-
-.subTitle {
-  font-size: 1.25rem;
-  position: absolute;
-  top: 0.5rem;
-  color: var(--clr-primary-a0);
 }
 
 .headerLink {
