@@ -37,7 +37,7 @@ const Sidebar = ({
   }, [isActive, toggleSidebar]);
 
   return (
-    <div className="app">
+    <div className="sidebar-container">
       <div
         ref={tabRef}
         className={`sidebar-tab ${isActive ? "active" : ""}`}
@@ -49,7 +49,7 @@ const Sidebar = ({
         )}
       </div>
       <div ref={sidebarRef} className={`sidebar ${isActive ? "active" : ""}`}>
-        <h2 className="sidebarTitle">Navigation</h2>
+        <span>Navigation</span>
         <nav>
           <ul>
             <li>

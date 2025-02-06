@@ -3,6 +3,7 @@ footer {
   background-color: var(--clr-surface-a10);
   padding: 2rem 1rem;
   border-top: 1px solid var(--clr-surface-a30);
+  z-index: 1000;
 }
 
 footer div {

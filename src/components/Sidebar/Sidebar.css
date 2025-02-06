@@ -1,14 +1,15 @@
 /* Sidebar Layout */
 .sidebar {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 250px;
   color: var(--clr-light-a0);
   display: flex;
-  padding-left: 2rem;
+  padding: 2rem;
+  margin-top: 4rem;
   flex-direction: column;
-  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
   overflow-y: auto;
   z-index: 10;
 }
@@ -16,13 +17,6 @@
 /* Sidebar Tab */
 .sidebar-tab {
   display: none;
-}
-
-/* Sidebar Title */
-.sidebarTitle {
-  display: flex;
-  padding: 0;
-  margin: 0;
 }
 
 /* Sidebar Navigation */
@@ -68,21 +62,15 @@
 
 /* Media Queries */
 
-/* Desktop Layout */
 @media (max-width: 1200px) {
   .sidebar {
-    position: sticky;
-    height: 100vh;
-    width: 250px;
-    color: var(--clr-light-a0);
-    display: flex;
-    justify-content: center;
-    overflow-y: auto;
-    z-index: 10;
+  }
+
+  .sidebar-tab {
+    display: none;
   }
 }
 
-/* Mobile Layout */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
